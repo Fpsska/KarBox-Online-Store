@@ -47,3 +47,16 @@ $(function () {
         // prevArrow: '<button class="pagntn__btn pagntn__btn--next pagntn__btn--prev">2</button>'
     });
 });
+
+$(function () {
+    $(".about__slider").slick({
+        dots: false,
+        arrows: false,
+        speed: 300,
+        autoHeight: true,
+        infinite: false,
+        slidesToShow: 1,
+        slidesToScroll: 1
+    });
+});
+

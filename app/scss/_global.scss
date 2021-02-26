@@ -1,4 +1,6 @@
-*,*::before,*::after {
+*,
+*::before,
+*::after {
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
 }
@@ -58,7 +60,6 @@ $yellow: #ffd600;
 $gray: #c4c4c4;
 $light-gray: #f9f9f9;
 
-
 .bg-dark {
     background-color: #242424;
     color: #fff;
@@ -67,7 +68,7 @@ $light-gray: #f9f9f9;
     background-color: #222222;
 }
 .bg-light {
-    background-color: #fff;
+    background-color: #fff !important;
     color: #242424;
 }
 .bg-gray {
@@ -104,7 +105,7 @@ $light-gray: #f9f9f9;
 
 .container_description {
     max-width: 1620px;
-    margin: 0 auto
+    margin: 0 auto;
 }
 
 body {
@@ -129,19 +130,63 @@ body {
     }
 }
 
-
 .logo {
     @extend %rb-bold;
     letter-spacing: 0.3em;
     font-size: 24px;
 }
 
+.img {
+    background-color: $gray;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    outline: 1px solid $dark;
+    width: 820px;
+    height: 550px;
+}
+
+.img_small {
+    background-color: $gray;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    // outline: 1px solid $dark;
+}
+
 .header_light {
     background-color: $first;
 }
 
-.bar_light {
-    background-color: $first;
+.about__text_center {
+    margin: auto 0;
+}
+
+.text__title_yellow {
+    color: $yellow;
+    font-size: 28px;
+    @extend %rus-regular;
+}
+
+.btn--yellow {
+    position: relative;
+    width: 13em;
+    color: $dark;
+    background-color: $yellow;
+    &::after {
+        content: "";
+        top: 38%;
+        right: 15%;
+        position: absolute;
+        width: 0;
+        height: 0;
+        border: 0 solid transparent;
+        border-bottom-width: 7px;
+        border-top-width: 7px;
+        border-left: 8px solid black;
+    }
 }
 
 .bar {
@@ -153,6 +198,21 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+}
+
+
+.bar_light {   
+    background-color: $first;
+    .menu__link {
+        @extend %rb-medium;
+        color: $dark;
+        font-size: 16px;
+    }
+    .btn--gray {
+        padding: 1.5em 2em;
+        color: $dark;
+        background: rgba(0, 0, 0, 0.08);
+    }
 }
 
 .column {
@@ -188,7 +248,7 @@ body {
         font-size: 18px;
         margin: 0 auto;
     }
-} 
+}
 
 .response-wrapper {
     padding-bottom: 7em;
@@ -198,7 +258,8 @@ body {
     padding: 15% 0;
 }
 
-.indent { /*+OTHER BLOCK*/
+.indent {
+    /*+OTHER BLOCK*/
     margin: 10em auto 5em auto;
 }
 
@@ -206,7 +267,7 @@ body {
     margin-bottom: 5em;
 }
 
-.descrpt_full {
+.descrpt_full { // RENAME
     width: auto;
     font-size: 18px;
 }
@@ -215,12 +276,8 @@ body {
     background-color: $dark;
 }
 
-.header-light {
-    background-color: $first;
-}
-
-.about__text_center {
-    margin: auto 0;
+.text-section {
+    margin-bottom: 5em;
 }
 
 .response-wrapper {
@@ -228,13 +285,14 @@ body {
     background-color: $dark;
 }
 
-.text__title_yellow {
-    color: $yellow;
-    font-size: 28px;
-    @extend %rus-regular;
+.skills-wrapper_small {
+    position: absolute;
+    top: 85%;
+    left: 0%;
+    width: 100%;
 }
 
-.about {          
+.about {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -260,30 +318,90 @@ body {
         opacity: 0.6;
         padding: 5px 2px;
     }
-    &__img {
-        width: 825px;
-        height: 550px;
-        background-color: $gray;
-        overflow: hidden;
-        background-image: url(../img/about-v1.2.jpg);
-        background-size: cover;
-        background-repeat: no-repeat;
-        outline: 1px solid $dark;
+    // &__img {
+    //     background-image: url(../img/about-v1.2.jpg);
+    // }
+}
+
+.about__header {  //mb remove in style.scss
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10em;
+    position: relative;
+    .location__stage {
+        font-size: 20px;
+        position: relative;
+        @extend %rb-medium;
+        &::before {
+            content: url(/img/slash.svg);
+            position: absolute;
+            top: 0;
+            left: 120%;
+        }
     }
-    .btn--yellow {
-        margin: auto 0 0 0;
+    .social__wrapper {
+        opacity: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: auto;
+        position: absolute;
+        top: 10%;
+        left: 105%;
+        .social__img {
+            margin-top: 4em;
+        }
     }
-    .about__img_history {
-        background-image: url(../img/history-1.jpg);
+}
+
+.about__footer { //mb remove in style.scss
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 10em;
+    border-bottom: 1px solid $gray;
+}
+
+.about__info {
+    width: 100%;
+    display: flex;
+    align-items: stretch;
+}
+
+.about__img_big {
+    height: 100%;
+    background-image: url(../img/about-v1.5.jpg);
+    background-color: $gray;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    outline: 1px solid $dark;
+}
+
+.about__slider {
+    margin-top: 2em;
+    width: 100%;
+    .about__slider-item {
+        display: flex !important;
+        justify-content: space-between;
+        padding-bottom: .5em;
+        // flex-wrap: wrap;
     }
-    .about__img_team {
-        background-image: url(../img/about-v1.3.jpg);
-    }
+}
+
+.about__social {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+}
+
+.about_big {
+    display: flex;
+    flex-direction: column;
 }
 
 .card__box_about {
     width: 100%;
-    box-shadow: none;
     .card__footer {
         height: 275px;
         position: relative;
@@ -347,20 +465,48 @@ body {
 }
 
 .location {
+    width: 100%;
     display: flex;
-    justify-content: space-between;
+    margin-bottom: 3em;
+    .location__item {
+        padding-left: 5em;
+        &:nth-child(1) {
+            padding-left: 0;
+        }
+    }
+    .location__stage {
+        font-size: 20px;
+        @extend %rb-medium;
+        position: relative;
+        color: $gray;
+    }
+    .location__stage_last {
+        font-size: 20px;
+        @extend %rb-medium;
+    }
 }
 
-.about__info {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+.location__stage.active {
+    border-bottom: 9px solid $yellow;
+    width: 45%;
+    color: $dark;
 }
 
-.about__img_big {
-    background-color: $gray;
-    width: 875px;
-    height: 580px;
+.tabs__menu {
+    .location__stage {
+        font-size: 38px;
+        @extend %rus-regular;
+    }
+}
+
+.tabs__title {
+    font-size: 20px;
+    @extend %rb-medium;
+}
+.tabs__subtitle {
+    opacity: .68;
+    font-size: 18px;
+    @extend %rb-light;
 }
 
 .response-block {
@@ -427,12 +573,6 @@ body {
     }
 }
 
-.about__contacts {
-    display: flex;
-    justify-content: space-between;
-    max-width: 590px;
-}
-
 .response-block__phone_black {
     background-color: $dark !important;
     a {
@@ -460,13 +600,6 @@ body {
         color: $dark;
         margin-left: 15px;
     }
-}
-
-.skills-wrapper_small {
-    position: absolute;
-    top: 85%;
-    left: 0%;
-    width: 100%;
 }
 
 .skills-wrapper {
@@ -517,7 +650,6 @@ body {
         height: 90px;
         width: 90px;
         background-color: $yellow;
-        
     }
     &__img-icon {
         position: absolute;
@@ -530,7 +662,7 @@ body {
 .feature {
     @extend %rb-light;
     font-size: 14px;
-    opacity: .7;
+    opacity: 0.7;
 }
 
 .value {
@@ -561,7 +693,7 @@ body {
         flex-basis: 100%;
         max-width: 504px;
         width: 100%;
-        box-shadow: 0px 5px 3px -1px rgba(196, 196, 196, 0.40);
+        box-shadow: 0px 5px 3px -1px rgba(196, 196, 196, 0.4) !important;
     }
     &__header {
         height: 350px;
@@ -668,7 +800,7 @@ body {
         display: flex !important;
         justify-content: space-between;
         flex-wrap: wrap;
-        padding: .4em .5em;
+        padding: 0.4em 0.5em;
     }
 }
 
@@ -719,6 +851,7 @@ body {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+        align-items: stretch;
         max-width: 26%;
         color: $first;
     }
@@ -807,29 +940,9 @@ body {
         &__text {
             @extend %rb-light;
             font-size: 16px;
-            opacity: .65;
+            opacity: 0.65;
         }
     }
 }
-
-.btn--yellow {
-    position: relative;
-    width: 13em;
-    color: $dark;
-    background-color: $yellow;
-    &::after {
-        content: "";
-        top: 38%;
-        right: 15%;
-        position: absolute;
-        width: 0;
-        height: 0;
-        border: 0 solid transparent;
-        border-bottom-width: 7px;
-        border-top-width: 7px;
-        border-left: 8px solid black;
-    }
-}
-
 
 

@@ -205,7 +205,7 @@
         background-color: $first;
         color: $dark;
         &::after {
-            content:  url(/img/selection-arrw.svg);
+            content: url(/img/selection-arrw.svg);
             top: 60%;
             left: 40%;
             position: absolute;
@@ -232,6 +232,51 @@
 
 .about {
     padding: 15em 0 10em 0;
+    &__img {
+        background-image: url(../img/about-v1.2.jpg);
+        width: 825px;
+        height: 550px;
+    }
+    .btn--yellow {
+        margin: auto 0 0 0;
+    }
+    .text__subtitle {
+        text-align: start;
+    }
+}
+
+.about__img_history {
+    background-image: url(../img/history-1.jpg);
+}
+
+.about__img_team {
+    background-image: url(../img/about-v1.3.jpg);
+}
+
+.about__section_1 {
+    width: 875px;
+}
+
+.about__section_2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-left: 5em;
+}
+
+.about__section_3 {
+    width: 60%;
+}
+
+.about__section_5 {
+    width: 100%;
+    margin-top: 15em;
+}
+
+.about__contacts {
+    display: flex;
+    justify-content: space-between;
+    max-width: 590px;
 }
 
 //*************./ABOUT*************//
@@ -443,7 +488,6 @@
     }
 }
 
-
 .testmnls-slider {
     &__text {
         max-width: 785px;
@@ -524,5 +568,79 @@
 }
 
 //*************./FOOTER*************//
+
+.gallary {
+    display: flex;
+    flex-direction: column;
+    margin-top: 5em;
+    .gallary__inner {
+        display: flex;
+        flex-direction: column;
+        width: 530px;
+        margin-top: 2em;
+    }
+    .gallary__title {
+        font-size: 28px;
+        @extend %rus-regular;
+    }
+    .gallary__inner_top {
+        display: flex;
+        justify-content: space-between;
+    }
+    .gallary__inner_btm {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 2em;
+    }
+    .gallary__item {
+        width: 245px;
+        height: 245px;
+        background-color: $gray;
+    }
+    .gallary__img_1 {
+        background-image: url("/img/headerSlider-3.jpg");
+    }
+    .gallary__img_2 {
+        background-image: url("/img/headerSlider-6.jpg");
+    }
+    .gallary__img_3 {
+        background-image: url("/img/headerSlider-5.jpg");
+    }
+    .gallary__img_4 {
+        background-image: url("/img/headerSlider-4.jpg");
+    }
+}
+
+.rating {
+    padding: 8em 4em 4em 4em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start;
+    width: 530px;
+    height: 410px;
+    background-color: #464646;
+    color: $first;
+    position: relative;
+    &::before {
+        content: url(/img/rate.svg);
+        top: 90%;
+        bottom: 0;
+        right: 0;
+        left: 12.5%;
+        position: absolute;
+    }
+    &__score {
+        font-size: 144px;
+        @extend %rus-regular;
+    }
+    &__score_second {
+        font-size: 24px;
+    }
+    &__title {
+        font-size: 28px;
+        @extend %rb-medium;
+    }
+}
 
 @import "media";
