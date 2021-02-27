@@ -200,8 +200,7 @@ body {
     justify-content: space-between;
 }
 
-
-.bar_light {   
+.bar_light {
     background-color: $first;
     .menu__link {
         @extend %rb-medium;
@@ -267,7 +266,8 @@ body {
     margin-bottom: 5em;
 }
 
-.descrpt_full { // RENAME
+.descrpt_full {
+    // RENAME
     width: auto;
     font-size: 18px;
 }
@@ -285,7 +285,7 @@ body {
     background-color: $dark;
 }
 
-.skills-wrapper_small {
+.skills_small {
     position: absolute;
     top: 85%;
     left: 0%;
@@ -318,12 +318,10 @@ body {
         opacity: 0.6;
         padding: 5px 2px;
     }
-    // &__img {
-    //     background-image: url(../img/about-v1.2.jpg);
-    // }
 }
 
-.about__header {  //mb remove in style.scss
+.about__header {
+    //mb remove in style.scss
     display: flex;
     flex-direction: column;
     margin-bottom: 10em;
@@ -354,7 +352,8 @@ body {
     }
 }
 
-.about__footer { //mb remove in style.scss
+.about__footer {
+    //mb remove in style.scss
     display: flex;
     justify-content: space-between;
     padding-bottom: 10em;
@@ -384,7 +383,7 @@ body {
     .about__slider-item {
         display: flex !important;
         justify-content: space-between;
-        padding-bottom: .5em;
+        padding-bottom: 0.5em;
         // flex-wrap: wrap;
     }
 }
@@ -504,7 +503,7 @@ body {
     @extend %rb-medium;
 }
 .tabs__subtitle {
-    opacity: .68;
+    opacity: 0.68;
     font-size: 18px;
     @extend %rb-light;
 }
@@ -602,10 +601,49 @@ body {
     }
 }
 
-.skills-wrapper {
+.services {
+    &__section_1 {
+        padding: 5em;
+    }
+    &__section_2 {
+        padding: 6em 0 8em 0;
+        .skills__item {
+            padding: 3em 3em;
+            max-width: 32%;
+            background-color: $yellow;
+        }
+        .skills__img {
+            background-color: $dark;
+        }
+    }
+    &__section_5 {
+        .testmnls-slider__item {
+            background: rgba(0, 0, 0, 0.08) !important;
+        }
+        .badges__cicle_left {
+            opacity: .6;
+        }
+        .badges__cicle_right {
+            opacity: .6;
+        }
+        .text {
+            &::before {
+                content: url(/img/testimonials-bg_white.svg) !important;
+                top: -20%;
+                left: 10%;
+                position: absolute;
+            }
+        }
+        .testimonials {
+            padding: 0;
+        }
+    }
+}
+
+.skills {
     display: flex;
     justify-content: space-between;
-    .skills {
+    &__item {
         background-color: $first;
         padding: 2px 5px;
         display: flex;
@@ -613,21 +651,21 @@ body {
         flex-basis: 100%;
         max-width: 25%;
         justify-content: space-between;
-        &__title {
-            @extend %rb-bold;
-            font-size: 28px;
-            margin-bottom: 40px;
-        }
-        &__img {
-            height: 90px;
-            width: 90px;
-            background-color: $yellow;
-            margin-bottom: 40px;
-        }
-        &__img-icon {
-            margin-top: 30%;
-            margin-left: 30%;
-        }
+    }
+    &__title {
+        @extend %rb-bold;
+        font-size: 28px;
+        margin-bottom: 40px;
+    }
+    &__img {
+        height: 90px;
+        width: 90px;
+        background-color: $yellow;
+        margin-bottom: 40px;
+    }
+    &__img-icon {
+        margin-top: 30%;
+        margin-left: 30%;
     }
 }
 
@@ -814,19 +852,39 @@ body {
         height: 125px;
         position: relative;
     }
-    &__img {
+    &__cicle {
         position: absolute;
+        border-radius: 50%;
+        background-color: $gray;
+        border: 3px solid $first;
+        overflow: hidden;
+
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
     }
-    &__img_1 {
-        left: 39%;
-    }
-    &__img_2 {
+    // &__img {
+    //     object-fit: cover;
+    // }
+    &__cicle_mid {
+        background-image: url(../img/testimonials-3.jpg);
+        width: 130px;
+        height: 130px;
         z-index: 1;
-        left: 43.5%;
+        left: 45%;
         top: -20%;
     }
-    &__img_3 {
-        left: 51%;
+    &__cicle_left {
+        background-image: url(../img/testimonials-4.jpg);
+        width: 85px;
+        height: 85px;
+        left: 41%;
+    }
+    &__cicle_right {
+        background-image: url(../img/testimonials-4.jpg);
+        width: 85px;
+        height: 85px;
+        left: 52%;
     }
     &__title {
         @extend %rb-bold;
@@ -836,6 +894,87 @@ body {
     &__subtitle {
         @extend %rb-regular;
         font-size: 18px;
+        opacity: 0.3;
+    }
+}
+
+.testimonials {
+    .text {
+        position: relative;
+        max-width: auto;
+        margin-bottom: 60px;
+        &__title {
+            text-transform: uppercase;
+            font-size: 20px;
+            color: $yellow;
+        }
+        &__subtitle {
+            font-size: 60px;
+            margin-bottom: 32px;
+        }
+        &::before {
+            content: url(/img/testimonials-bg.svg);
+            top: -20%;
+            left: 10%;
+            position: absolute;
+        }
+    }
+    .badges {
+        margin: 70px 0;
+    }
+}
+
+.testmnls-slider {
+    &__text {
+        max-width: 785px;
+        padding: 5px 5%;
+    }
+    &__img {
+        width: 35%;
+        height: 350px;
+        margin: 0 0 0 auto;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    &__decoration {
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: $yellow;
+        width: 115px;
+        height: 90px;
+        top: 0;
+    }
+    .testmnls-slider__item {
+        display: flex !important;
+        align-items: center !important;
+        width: 1200px;
+        height: 350px;
+        background-color: rgb(61, 61, 61);
+    }
+    .slider__img_1 {
+        background-image: url("/img/testimonials-4.jpg");
+    }
+    .slider__img_2 {
+        background-image: url("/img/testimonials-3.jpg");
+    }
+    .slider__img_3 {
+        background-image: url("/img/testimonials-4.jpg");
+    }
+    .slider-arw__testmn {
+        top: 45%;
+        background: transparent;
+        position: absolute;
+    }
+    .slider-arw__testmn_right {
+        left: 110%;
+    }
+    .slider-arw__testmn_left {
+        left: -15%;
+    }
+    .slick-disabled {
         opacity: 0.3;
     }
 }
@@ -860,6 +999,7 @@ body {
         opacity: 0.5;
     }
     .footer-input {
+        padding-top: .5em;
         &__text {
             max-width: 85%;
             margin-bottom: 20px;
@@ -944,5 +1084,3 @@ body {
         }
     }
 }
-
-
