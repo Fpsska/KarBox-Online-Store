@@ -47,7 +47,6 @@ $(function () {
         // prevArrow: '<button class="pagntn__btn pagntn__btn--next pagntn__btn--prev">2</button>'
     });
 });
-
 $(function () {
     $(".about__slider").slick({
         dots: false,
@@ -59,4 +58,5 @@ $(function () {
         slidesToScroll: 1
     });
 });
+
 

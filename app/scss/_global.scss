@@ -52,6 +52,10 @@ button {
     border: none;
 }
 
+input {
+    padding: 0 12px;
+}
+
 //*************./NULLSTYLES*************//
 
 $first: #fff;
@@ -127,6 +131,26 @@ body {
         @extend %rb-medium;
         color: $first;
         font-size: 16px;
+    }
+    .menu__item {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    // .menu__item {
+    //     display: inline-block;
+    // }
+    .menu__item.active {
+        position: relative;
+        &::before { 
+            content:url(../img/active.svg);
+            position: absolute;
+            text-align: center;
+            top: 120%;
+            left: 0;
+            right: 0;
+            width: auto;
+        }
     }
 }
 
@@ -254,6 +278,7 @@ body {
 }
 
 .text_indent {
+    // УБРАТЬ, возможно обращение к элементу внутри родительского блока
     padding: 15% 0;
 }
 
@@ -288,7 +313,7 @@ body {
 .skills_small {
     position: absolute;
     top: 85%;
-    left: 0%;
+    left: 0;
     width: 100%;
 }
 
@@ -326,12 +351,12 @@ body {
     flex-direction: column;
     margin-bottom: 10em;
     position: relative;
-    .location__stage {
+    .position__stage {
         font-size: 20px;
         position: relative;
         @extend %rb-medium;
         &::before {
-            content: url(/img/slash.svg);
+            content: url(../img/slash.svg);
             position: absolute;
             top: 0;
             left: 120%;
@@ -464,35 +489,94 @@ body {
 }
 
 .location {
+    &__text {
+        margin-bottom: 8em;
+        display: flex;
+        justify-content: space-between;
+    }
+    &__title {
+        font-size: 48px;
+        @extend %rus-regular;
+        width: 35%;
+    }
+    &__subtitle {
+        font-size: 18px;
+        @extend %rb-regular;
+        width: 45%;
+    }
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    &__item {
+        width: 25%;
+        padding: 4em 1.5em 4em 2.5em;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    &__item {
+        width: 22%;
+        height: 27em;
+        background-color: $yellow;
+    }
+    &__city {
+        @extend %monts-bold;
+        font-size: 38px;
+    }
+    &__country {
+        @extend %monts-light;
+        text-transform: uppercase;
+        font-size: 24px;
+    }
+    &__item-subtitle {
+        @extend %monts-medium;
+        font-size: 20px;
+    }
+    .response-block__phone {
+        margin: 0;
+    }
+}
+
+
+
+.position {
     width: 100%;
     display: flex;
     margin-bottom: 3em;
-    .location__item {
+    &__item {
         padding-left: 5em;
         &:nth-child(1) {
             padding-left: 0;
         }
     }
-    .location__stage {
+    &__stage {
         font-size: 20px;
         @extend %rb-medium;
         position: relative;
         color: $gray;
     }
-    .location__stage_last {
+    &__stage_last {
         font-size: 20px;
         @extend %rb-medium;
     }
 }
 
-.location__stage.active {
+.position__stage.active {
     border-bottom: 9px solid $yellow;
     width: 45%;
     color: $dark;
 }
 
 .tabs__menu {
-    .location__stage {
+    .position__stage {
         font-size: 38px;
         @extend %rus-regular;
     }
@@ -539,7 +623,6 @@ body {
         font-weight: 400;
     }
     &__contacts {
-        padding: 1.5 2.5;
         display: flex;
         align-items: center;
         width: 100%;
@@ -558,14 +641,14 @@ body {
             position: absolute;
             width: 0;
             height: 0;
-            border: 0 solid transparent;
+            border: 0;
             border-bottom-width: 7px;
             border-top-width: 7px;
             border-left: 8px solid #fff;
         }
     }
     &::before {
-        content: url(/img/response-bg.svg);
+        content: url(../img/response-bg.svg);
         top: 12%;
         left: 28%;
         position: absolute;
@@ -593,7 +676,6 @@ body {
     padding: 1.5em 1.1em;
     font-style: normal;
     font-weight: 700;
-    font-size: 16px;
     line-height: 20px;
     a {
         color: $dark;
@@ -621,14 +703,14 @@ body {
             background: rgba(0, 0, 0, 0.08) !important;
         }
         .badges__cicle_left {
-            opacity: .6;
+            opacity: 0.6;
         }
         .badges__cicle_right {
-            opacity: .6;
+            opacity: 0.6;
         }
         .text {
             &::before {
-                content: url(/img/testimonials-bg_white.svg) !important;
+                content: url(../img/testimonials-bg_white.svg) !important;
                 top: -20%;
                 left: 10%;
                 position: absolute;
@@ -731,13 +813,13 @@ body {
         flex-basis: 100%;
         max-width: 504px;
         width: 100%;
-        box-shadow: 0px 5px 3px -1px rgba(196, 196, 196, 0.4) !important;
+        box-shadow: 0 5px 3px -1px rgba(196, 196, 196, 0.4) !important;
     }
     &__header {
         height: 350px;
         position: relative;
         &::after {
-            content: url(/img/rate.svg);
+            content: url(../img/rate.svg);
             top: 18%;
             bottom: 0;
             right: 0;
@@ -901,7 +983,7 @@ body {
 .testimonials {
     .text {
         position: relative;
-        max-width: auto;
+        //max-width: auto;
         margin-bottom: 60px;
         &__title {
             text-transform: uppercase;
@@ -913,7 +995,7 @@ body {
             margin-bottom: 32px;
         }
         &::before {
-            content: url(/img/testimonials-bg.svg);
+            content: url(../img/testimonials-bg.svg);
             top: -20%;
             left: 10%;
             position: absolute;
@@ -955,13 +1037,13 @@ body {
         background-color: rgb(61, 61, 61);
     }
     .slider__img_1 {
-        background-image: url("/img/testimonials-4.jpg");
+        background-image: url("../img/testimonials-4.jpg");
     }
     .slider__img_2 {
-        background-image: url("/img/testimonials-3.jpg");
+        background-image: url("../img/testimonials-3.jpg");
     }
     .slider__img_3 {
-        background-image: url("/img/testimonials-4.jpg");
+        background-image: url("../img/testimonials-4.jpg");
     }
     .slider-arw__testmn {
         top: 45%;
@@ -999,7 +1081,7 @@ body {
         opacity: 0.5;
     }
     .footer-input {
-        padding-top: .5em;
+        padding-top: 0.5em;
         &__text {
             max-width: 85%;
             margin-bottom: 20px;
@@ -1018,13 +1100,13 @@ body {
         }
         input {
             color: $first;
-            padding: 0 15px;
             width: 100%;
             background: transparent;
             border: 1px solid #fff;
             opacity: 0.5;
         }
     }
+
     .logo {
         padding: 0;
         margin-bottom: 40px;
@@ -1084,3 +1166,154 @@ body {
         }
     }
 }
+
+.contacs {
+    &::before {
+        content: url(../img/mapBackground.svg);
+        position: absolute;
+        top: 30%;
+        left: 10%;
+    }
+    &::after {
+        content: url(../img/circleElement.svg);
+        position: absolute;
+        top: 72%;
+        left: 28%;
+    }
+    &__header {
+        position: relative;
+        padding-bottom: 7em;
+    }
+    &__footer {
+        padding: 12em 0 10em 0;
+    }
+    .text {
+        padding: 5em;
+    }
+}
+
+.form {
+    z-index: 1;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5em 1.3em 4em 1.3em;
+    margin: 0 auto;
+    width: 700px;
+    color: $dark;
+    background-color: $first;
+    &__text {
+        font-size: 16px;
+        position: absolute;
+        @extend %rb-regular;
+    }
+    &__name_title {
+        top: 6%;
+        left: 10%;
+    }
+    &__email_title {
+        top: 4%;
+        left: 54%;
+    }
+    &__subject_title {
+        top: 22%;
+        left: 10%;
+    }
+    &__message_title {
+        top: 38%;
+        left: 10%;
+    }
+    &__section_1 {
+        width: 85%;
+        display: flex;
+        justify-content: space-between;
+        .form__name {
+            width: 45%;
+        }
+        .form__email {
+            width: 45%;
+        }
+    }
+    &__section_2 {
+        width: 85%;
+        margin: 5em 0;
+        .form__subject {
+            width: 100%;
+        }
+    }
+    &__section_3 {
+        width: 85%;
+        margin-bottom: 5em;
+        .form__message {
+            width: 100%;
+            height: 15em;
+        }
+    }
+    &__section_4 {
+        color: $dark;
+        width: 85%;
+        .btn--yellow {
+            width: 100%;
+            text-align: center;
+            &::after {
+                display: none;
+            }
+        }
+    }
+    input {
+        height: 45px;
+        border: 1px solid $dark;
+        border-radius: 2px;
+        background-color: transparent;
+    }
+    .checkBox {
+        font-size: 18px;
+        display: flex;
+        align-items: center;  
+        margin-bottom: 2em;
+        .checkBox__input {
+            margin: 0;
+            padding: 0;
+            appearance: none;
+            display: block;
+            width: 1.5em;
+            height: 1.5em;
+            background-color: #fff;
+            border: 1px solid #aaa;
+            border-radius: 4px;
+            outline: none;
+            &:checked {
+                position: relative;
+                background-color: transparent;
+                border-color: $dark;
+                /* The checkmark */
+                &::after {
+                    box-sizing: border-box;
+                    content: "";
+                    position: absolute;
+                    top: 1px;
+                    left: 3px;
+                    width: 6px;
+                    height: 10px;
+                    border: 2px solid $dark;
+                    border-top: none;
+                    border-left: none;
+                    transform-origin: bottom right;
+                    transform: translateX(0) translateY(1px) rotate(45deg);
+                }
+            }
+            &:hover {
+                box-shadow: 0 0 0 1px $gray;
+                transition: .2s linear;
+            }
+        }
+        .checkBox__label {
+            margin-left: 1em;
+            font-size: 18px;
+            @extend %rb-medium;
+        }
+    }
+}
+
+

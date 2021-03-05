@@ -7,6 +7,22 @@
 }
 
 @font-face {
+    font-family: "Montserrat-Medium (500)";
+    src: url("../fonts/Montserrat-Medium\ \(500\).ttf") format("truetype");
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Montserrat-Light (300)";
+    src: url("../fonts/Montserrat-Light\ \(300\).ttf") format("truetype");
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
     font-family: "Roboto-Black (900)";
     src: url("../fonts/Roboto-Black\ \(900\).ttf") format("truetype");
     font-weight: 900;
