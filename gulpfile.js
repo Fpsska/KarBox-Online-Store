@@ -7,14 +7,13 @@ const uglify = require("gulp-uglify-es").default; //
 const autoprefixer = require("gulp-autoprefixer");
 const imagemin = require("gulp-imagemin"); // отпимизация img
 const del = require("del"); // удаление dist-папки
+const ghpages = require('gh-pages'); // gh-pages for dist folder
 
-// var gulp = require('gulp');
-// var ghPages = require('gulp-gh-pages');
+ghpages.publish('dist', {
+    repo: 'https://github.com/Fpsska/KarBox-Online-Store.git',
+    message: 'Auto-generated commit'
+});
 
-// gulp.task('deploy', function () {
-//     return gulp.src('./dist/**/*')
-//         .pipe(ghPages());
-// });
 
 function cleanDist() {
     return del("dist");
@@ -41,6 +40,7 @@ function scripts() {
     return src([
         "node_modules/jquery/dist/jquery.js",
         "node_modules/slick-carousel/slick/slick.js",
+        "node_modules/fullpage.js/dist/fullpage.js",
         "app/js/main.js"
     ])
         .pipe(concat("main.min.js")) // конкатенация + единое название 
@@ -52,6 +52,7 @@ function scripts() {
 function styles() {       /*КОМПИЛЯЦИЯ scss -> style.min.css*/
     return src([
         "node_modules/slick-carousel/slick/slick.css",
+        "node_modules/fullpage.js/dist/fullpage.css",
         "app/scss/style.scss"
     ]) 
         .pipe(scss({ outputStyle: "compressed" })) // минификация

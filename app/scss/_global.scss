@@ -19,6 +19,7 @@ p {
 ul,
 li,
 a {
+    color: #fff;
     padding: 0;
     margin: 0;
     text-decoration: none;
@@ -55,6 +56,24 @@ button {
 input {
     padding: 0 12px;
 }
+// input:focus:invalid {
+//     border: 1px solid red !important;
+// }
+// input:valid {
+//     border: 1px solid green !important;
+// }
+// input{
+//     border: 1px solid #fff;
+// }
+input:invalid {
+    color: #ff0000 !important;
+}
+input:valid {
+    color: rgb(5, 255, 5) !important;
+}
+// input[required] {
+//     background-color: red !important;
+// }
 
 //*************./NULLSTYLES*************//
 
@@ -137,13 +156,10 @@ body {
         flex-direction: column;
         justify-content: space-between;
     }
-    // .menu__item {
-    //     display: inline-block;
-    // }
     .menu__item.active {
         position: relative;
-        &::before { 
-            content:url(../img/active.svg);
+        &::before {
+            content: url(../img/active.svg);
             position: absolute;
             text-align: center;
             top: 120%;
@@ -186,6 +202,10 @@ body {
 
 .about__text_center {
     margin: auto 0;
+}
+
+#vendor__slider-mobile {
+    display: none !important;
 }
 
 .text__title_yellow {
@@ -235,6 +255,20 @@ body {
         padding: 1.5em 2em;
         color: $dark;
         background: rgba(0, 0, 0, 0.08);
+    }
+}
+
+.bar-mobile {
+    display: none;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1em 0;
+    .logo {
+        margin-left: 1em;
+    }
+    .btn--black {
+        margin-right: 1em;
     }
 }
 
@@ -545,8 +579,6 @@ body {
     }
 }
 
-
-
 .position {
     width: 100%;
     display: flex;
@@ -702,10 +734,10 @@ body {
         .testmnls-slider__item {
             background: rgba(0, 0, 0, 0.08) !important;
         }
-        .badges__cicle_left {
+        .badges__circle_left {
             opacity: 0.6;
         }
-        .badges__cicle_right {
+        .badges__circle_right {
             opacity: 0.6;
         }
         .text {
@@ -934,7 +966,7 @@ body {
         height: 125px;
         position: relative;
     }
-    &__cicle {
+    &__circle {
         position: absolute;
         border-radius: 50%;
         background-color: $gray;
@@ -948,7 +980,7 @@ body {
     // &__img {
     //     object-fit: cover;
     // }
-    &__cicle_mid {
+    &__circle_mid {
         background-image: url(../img/testimonials-3.jpg);
         width: 130px;
         height: 130px;
@@ -956,13 +988,13 @@ body {
         left: 45%;
         top: -20%;
     }
-    &__cicle_left {
+    &__circle_left {
         background-image: url(../img/testimonials-4.jpg);
         width: 85px;
         height: 85px;
         left: 41%;
     }
-    &__cicle_right {
+    &__circle_right {
         background-image: url(../img/testimonials-4.jpg);
         width: 85px;
         height: 85px;
@@ -981,6 +1013,7 @@ body {
 }
 
 .testimonials {
+    position: relative;
     .text {
         position: relative;
         //max-width: auto;
@@ -1028,13 +1061,25 @@ body {
         width: 115px;
         height: 90px;
         top: 0;
+        z-index: 10;
     }
     .testmnls-slider__item {
+        position: relative;
         display: flex !important;
         align-items: center !important;
         width: 1200px;
         height: 350px;
         background-color: rgb(61, 61, 61);
+        // &::before {
+        //     content: url(../img/testimonials-slider.svg);
+        //     background-color: yellow;
+        //     width: 105px;
+        //     height: 70px;
+        //     text-align: center;
+        //     position: absolute;
+        //     top: 10%;
+        //     left: 0;
+        // }
     }
     .slider__img_1 {
         background-image: url("../img/testimonials-4.jpg");
@@ -1046,15 +1091,15 @@ body {
         background-image: url("../img/testimonials-4.jpg");
     }
     .slider-arw__testmn {
-        top: 45%;
+        top: 44%;
         background: transparent;
         position: absolute;
     }
     .slider-arw__testmn_right {
-        left: 110%;
+        left: 105%;
     }
     .slider-arw__testmn_left {
-        left: -15%;
+        left: -10%;
     }
     .slick-disabled {
         opacity: 0.3;
@@ -1065,7 +1110,11 @@ body {
     &__inner {
         color: $first;
         padding: 100px 0;
-        display: flex;
+        display: grid;
+        // grid-column-gap: 1em;
+        grid-template-columns: 25% auto auto 25%;
+        grid-template-rows: auto;
+        grid-template-areas: "a b c d";
         justify-content: space-between;
     }
     &__column {
@@ -1073,18 +1122,31 @@ body {
         flex-direction: column;
         justify-content: space-between;
         align-items: stretch;
-        max-width: 26%;
         color: $first;
+    }
+    &__column_media {
+        display: none;
     }
     &__subtitle {
         padding: 5px 2px;
         opacity: 0.5;
     }
+    &__column_1 {
+        grid-area: a;
+    }
+    &__column_2 {
+        grid-area: b;
+    }
+    &__column_3 {
+        grid-area: c;
+    }
+    &__column_4 {
+        grid-area: d;
+    }
     .footer-input {
-        padding-top: 0.5em;
         &__text {
             max-width: 85%;
-            margin-bottom: 20px;
+            padding-bottom: 20px;
         }
         &__title {
             @extend %rb-bold;
@@ -1125,6 +1187,7 @@ body {
     }
 
     .social {
+        width: 100%;
         &__text {
             @extend %rb-medium;
             margin-bottom: 20px;
@@ -1135,6 +1198,7 @@ body {
         &__wrapper {
             opacity: 0.5;
             display: flex;
+            flex-wrap: wrap;
             justify-content: space-between;
         }
         &__img {
@@ -1270,7 +1334,7 @@ body {
     .checkBox {
         font-size: 18px;
         display: flex;
-        align-items: center;  
+        align-items: center;
         margin-bottom: 2em;
         .checkBox__input {
             margin: 0;
@@ -1305,7 +1369,7 @@ body {
             }
             &:hover {
                 box-shadow: 0 0 0 1px $gray;
-                transition: .2s linear;
+                transition: 0.2s linear;
             }
         }
         .checkBox__label {
@@ -1315,5 +1379,3 @@ body {
         }
     }
 }
-
-

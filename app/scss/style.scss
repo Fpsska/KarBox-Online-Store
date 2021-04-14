@@ -17,7 +17,7 @@
     }
     &__slider {
         overflow: hidden;
-        position: relative;
+        //position: relative;
         .slick-dots {
             position: absolute;
             top: 45%;
@@ -32,6 +32,9 @@
             .slick-active {
                 color: $yellow;
             }
+        }
+        .header__slider-item {
+            position: relative;
         }
         &::before {
             content: url(/img/header-bg.svg);
@@ -75,18 +78,18 @@
         &__descrpt {
             opacity: 0.3;
             font-size: 16px;
-            padding: 5px 2px;
+            margin: 5px 2px;
         }
         &__price {
             margin-top: 100px;
             max-width: 100%;
             display: flex;
             flex-direction: column;
-            h2 {
+            .information__price_title {
                 @extend %rb-light;
                 font-size: 12px;
             }
-            h3 {
+            .information__price_subtitle {
                 @extend %rb-bold;
                 font-size: 36px;
                 margin-bottom: 1em;
@@ -117,7 +120,7 @@
             margin: 0 0 0 auto;
             .header-1 {
                 display: block;
-                max-width: 100%;
+                width: 100%;
                 height: 100%;
                 object-fit: cover;
             }
@@ -129,8 +132,15 @@
         align-items: center;
         display: flex;
         flex-direction: row;
+        &__section_1 {
+            width: 70%;
+            display: flex;
+            justify-content: space-between;
+            padding-right: 5em;
+        }
         &__column {
-            flex-basis: 100%;
+            min-width: 45%;
+            flex-grow: 1;
             .column__title {
                 font-weight: 200;
                 margin-bottom: 24px;
@@ -148,8 +158,13 @@
             .slider__img {
                 display: block;
                 object-fit: cover;
-                max-width: 100%;
-                height: 100%;
+                height: auto;
+                margin: 0 auto;
+            }
+            .slider__img_box {
+                overflow: hidden;
+                text-align: center;
+                width: 100%;
             }
             .slider-arw__header {
                 outline: none;
@@ -298,8 +313,9 @@
             color: #888888;
         }
     }
-    .menu__item {
-        margin-right: 4em;
+    .slider-item {
+        display: flex !important;
+        flex-direction: row !important;
     }
 }
 
@@ -326,8 +342,8 @@
     &__cards {
         padding: 5em 0;
     }
-    .btn--yellow {
-        margin-left: 43.5%;
+    &__btn {
+        margin: auto;
     }
     &__sort {
         display: flex;
@@ -436,7 +452,8 @@
 //*************./OVERVIEW*************//
 
 .advantages {
-    padding: 10em 0 5em 0;
+    position: relative;
+    margin: 10em 0 5em 0;
     .text {
         position: relative;
         max-width: auto;
@@ -486,6 +503,11 @@
         @extend %rb-bold;
         text-transform: uppercase;
         margin-bottom: 40px;
+    }
+    .menu__item_title {
+        .menu__link {
+            line-height: 0px;
+        }
     }
 }
 

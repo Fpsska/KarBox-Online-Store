@@ -9,23 +9,45 @@
 </head>
 
 <body>
+
     <header class="header bg-dark">
-        <div class="header__inner">
+        <div class="header__inner" id="home">
             <div class="container_big">
-                <div class="header__bar bar">
-                    <h1 class="logo"><span style="color: #FFD600">KAR</span>BOX</h1>
-                    <nav class="menu header__menu">
+                <div class="bar">
+                    <a href="#">
+                        <h1 class="logo"><span style="color: #FFD600">KAR</span>BOX</h1>
+                    </a>
+                    <nav class="menu header__menu" id="header__menu">
                         <ul class="menu__list">
-                            <li class="menu__item active"><a href="" class="menu__link">Home</a></li>
-                            <li class="menu__item"><a href="" class="menu__link">About</a></li>
-                            <li class="menu__item"><a href="" class="menu__link">Services</a></li>
-                            <li class="menu__item"><a href="" class="menu__link">Collections</a></li>
-                            <li class="menu__item"><a href="" class="menu__link">Blog</a></li>
+                            <li class="menu__item active" data-menuanchor="home"><a href="#home"
+                                    class="menu__link">Home</a></li>
+                            <li class="menu__item" data-menuanchor="about"><a href="#about" class="menu__link">About</a>
+                            </li>
+                            <li class="menu__item" data-menuanchor=""><a href="#" class="menu__link">Services</a></li>
+                            <li class="menu__item" data-menuanchor="products"><a href="#products"
+                                    class="menu__link">Collections</a></li>
+                            <li class="menu__item" data-menuanchor="testimonials"><a href="#testimonials"
+                                    class="menu__link">Blog</a></li>
                         </ul>
                     </nav>
-                    <button class="btn btn--black" href="">Contact us</button>
+                    <button class="btn btn--black" data-menuanchor="footer">Contact us</button>
+                </div>
+
+                <div class="bar-mobile bar-mobile_home">
+                    <a href="#">
+                        <h1 class="logo"><span style="color: #FFD600">KAR</span>BOX</h1>
+                    </a>
+                    <nav class="menu header__menu" id="header__menu">
+                        <ul class="menu__list">
+                            <li class="menu__item active" data-menuanchor="home"><a href="#home"
+                                    class="menu__link">Home</a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <button class="btn btn--black" data-menuanchor="footer">Contact us</button>
                 </div>
             </div>
+
 
             <div class="header__slider">
 
@@ -43,14 +65,14 @@
                                         aliqua. Ut enim ad minim veniam</p>
                                 </div>
                                 <div class="information__price">
-                                    <h2>Starting from</h2>
-                                    <h3>$599.999</h3>
-                                    <button class="btn btn--white" href="">Discover More</button>
+                                    <h2 class="information__price_title">Starting from</h2>
+                                    <h3 class="information__price_subtitle">$599.999</h3>
+                                    <button class="btn btn--white">Discover More</button>
                                 </div>
                             </div>
-                            <div class="information__img">
+                            <picture class="information__img">
                                 <img class="header-1" src="/img/header-1.jpg" alt="">
-                            </div>
+                            </picture>
                         </div>
                     </div>
                 </div>
@@ -69,14 +91,14 @@
                                         aliqua. Ut enim ad minim veniam</p>
                                 </div>
                                 <div class="information__price">
-                                    <h2>Starting from</h2>
-                                    <h3>$599.999</h3>
-                                    <button class="btn btn--white" href="">Discover More</button>
+                                    <h2 class="information__price_title">Starting from</h2>
+                                    <h3 class="information__price_subtitle">$599.999</h3>
+                                    <button class="btn btn--white">Discover More</button>
                                 </div>
                             </div>
-                            <div class="information__img">
-                                <img class="header-1" src="/img/header-3.jpg" alt="">
-                            </div>
+                            <picture class="information__img">
+                                <img class="header-1" src="/img/header-2.jpg" alt="">
+                            </picture>
                         </div>
                     </div>
                 </div>
@@ -94,14 +116,14 @@
                                         aliqua. Ut enim ad minim veniam</p>
                                 </div>
                                 <div class="information__price">
-                                    <h2>Starting from</h2>
-                                    <h3>$599.999</h3>
-                                    <button class="btn btn--white" href="">Discover More</button>
+                                    <h2 class="information__price_title">Starting from</h2>
+                                    <h3 class="information__price_subtitle">$599.999</h3>
+                                    <button class="btn btn--white">Discover More</button>
                                 </div>
                             </div>
-                            <div class="information__img">
-                                <img class="header-1" src="/img/header-2.jpg" alt="">
-                            </div>
+                            <picture class="information__img">
+                                <img class="header-1" src="/img/header-3.jpg" alt="">
+                            </picture>
                         </div>
                     </div>
                 </div>
@@ -110,34 +132,48 @@
             <section class="bg-carbonic">
                 <div class="container_description">
                     <div class="description">
-                        <div class="description__column column">
-                            <h2 class="column__title">Great Muscle Car</h2>
-                            <p class="column__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                                eiusmod tempor incididunt
-                                ut
-                                labore et dolore magna aliqua. Ut enim ad minim veniam</p>
-                        </div>
-                        <div class="description__column column">
-                            <h2 class="column__title">Classic Stylish</h2>
-                            <p class="column__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                                eiusmod tempor incididunt
-                                ut
-                                labore et dolore magna aliqua. Ut enim ad minim veniam</p>
-                        </div>
-                        <div class="description__slider">
 
-                            <div class="description__slider-item">
-                                <img class="slider__img" src="/img/headerSlider-3.jpg" alt="">
+                        <div class="description__section_1">
+                            <div class="description__column column">
+                                <h2 class="column__title">Great Muscle Car</h2>
+                                <p class="column__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                                    eiusmod tempor incididunt
+                                    ut
+                                    labore et dolore magna aliqua. Ut enim ad minim veniam</p>
                             </div>
 
-                            <div class="description__slider-item">
-                                <img class="slider__img" src="/img/headerSlider-4.jpg" alt="">
-                            </div>
-
-                            <div class="description__slider-item">
-                                <img class="slider__img" src="/img/headerSlider-5.jpg" alt="">
+                            <div class="description__column column">
+                                <h2 class="column__title">Classic Stylish</h2>
+                                <p class="column__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                                    eiusmod tempor incididunt
+                                    ut
+                                    labore et dolore magna aliqua. Ut enim ad minim veniam</p>
                             </div>
                         </div>
+
+                        <div class="description__section_2">
+                            <div class="description__slider">
+
+                                <div class="description__slider-item">
+                                    <picture class="slider__img_box">
+                                        <img class="slider__img" src="/img/headerSlider-3.jpg" alt="">
+                                    </picture>
+                                </div>
+
+                                <div class="description__slider-item">
+                                    <picture class="slider__img_box">
+                                        <img class="slider__img" src="/img/headerSlider-4.jpg" alt="">
+                                    </picture>
+                                </div>
+
+                                <div class="description__slider-item">
+                                    <picture class="slider__img_box">
+                                        <img class="slider__img" src="/img/headerSlider-5.jpg" alt="">
+                                    </picture>
+                                </div>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
             </section>
@@ -147,7 +183,7 @@
     <!--./HEADER-->
 
     <section class="container_description">
-        <div class="about">
+        <div class="about" id="about">
             <div class="about__text">
                 <h2 class="about__title">ABOUT US</h2>
                 <h3 class="about__subtitle">Kardiler is the best place to get your dream car</h3>
@@ -158,7 +194,7 @@
                     et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
                     ut
                     aliquip ex ea commodo</p>
-                <button class="btn btn--yellow" href="">View More</button>
+                <button class="btn btn--yellow">View More</button>
             </div>
             <div class="about__img img"></div>
         </div>
@@ -169,8 +205,26 @@
         <div class="container_small">
             <div class="vendor">
                 <h3 class="vendor__title">Our Vendor</h3>
-                <nav class="menu vendor__menu">
-                    <ul class="menu__list">
+                <nav class="menu vendor__menu" id="vendor__slider">
+                    <ul class="slider-item menu__list">
+                        <li class="menu__item"><a href="" class="menu__link">HONDO</a></li>
+                        <li class="menu__item"><a href="" class="menu__link">FORT</a></li>
+                        <li class="menu__item"><a href="" class="menu__link">TOYOTO</a></li>
+                        <li class="menu__item"><a href="" class="menu__link">PORCE</a></li>
+                        <li class="menu__item"><a href="" class="menu__link">MUSTIBISHA</a></li>
+                        <li class="menu__item"><a href="" class="menu__link">DASTIN</a></li>
+                        <li class="menu__item"><a href="" class="menu__link">SIZUKA</a></li>
+                    </ul>
+                    <ul class="slider-item menu__list">
+                        <li class="menu__item"><a href="" class="menu__link">HONDO</a></li>
+                        <li class="menu__item"><a href="" class="menu__link">FORT</a></li>
+                        <li class="menu__item"><a href="" class="menu__link">TOYOTO</a></li>
+                        <li class="menu__item"><a href="" class="menu__link">PORCE</a></li>
+                        <li class="menu__item"><a href="" class="menu__link">MUSTIBISHA</a></li>
+                        <li class="menu__item"><a href="" class="menu__link">DASTIN</a></li>
+                        <li class="menu__item"><a href="" class="menu__link">SIZUKA</a></li>
+                    </ul>
+                    <ul class="slider-item menu__list">
                         <li class="menu__item"><a href="" class="menu__link">HONDO</a></li>
                         <li class="menu__item"><a href="" class="menu__link">FORT</a></li>
                         <li class="menu__item"><a href="" class="menu__link">TOYOTO</a></li>
@@ -180,12 +234,27 @@
                         <li class="menu__item"><a href="" class="menu__link">SIZUKA</a></li>
                     </ul>
                 </nav>
+
+                <nav class="menu vendor__menu" id="vendor__slider-mobile">
+                    <ul class="slider-item menu__list">
+                        <li class="menu__item"><a href="" class="menu__link">HONDO</a></li>
+                        <li class="menu__item"><a href="" class="menu__link">FORT</a></li>
+                        <li class="menu__item"><a href="" class="menu__link">TOYOTO</a></li>
+                    </ul>
+                    <ul class="slider-item menu__list">
+                        <li class="menu__item"><a href="" class="menu__link">PORCE</a></li>
+                        <li class="menu__item"><a href="" class="menu__link">MUSTIBISHA</a></li>
+                        <li class="menu__item"><a href="" class="menu__link">DASTIN</a></li>
+                        <li class="menu__item"><a href="" class="menu__link">SIZUKA</a></li>
+                    </ul>
+                </nav>
+
             </div>
         </div>
     </section>
     <!--./VENDOR-->
 
-    <section class="products bg-light">
+    <section class="products bg-light" id="products">
         <div class="container">
             <div class="products__inner">
 
@@ -265,7 +334,9 @@
                         </div>
                     </div>
                 </div>
-                <button class="btn btn--yellow" href="">View More</button>
+                <div class="products__btn">
+                    <button class="btn btn--yellow">View More</button>
+                </div>
             </div>
         </div>
     </section>
@@ -293,48 +364,52 @@
 
     <!--./OVERVIEW-->
 
-    <section class="advantages container">
-        <div class="text">
-            <h2 class="text__title">Kardiler</h2>
-            <h3 class="text__subtitle">Why choose us</h3>
-            <p class="text__descrpt">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                tempor incididunt
-                ut labore et dolore magna aliqua.</p>
-        </div>
-        <div class="skills">
-            <div class="skills__item">
-                <div class="skills__img">
-                    <img class="skills__img-icon" src="/img/skill-1.svg" alt="">
-                </div>
-                <h2 class="skills__title">The best price that you really expect</h2>
-                <p class="skills__subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                    exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    <section class="advantages">
+        <div class="container">
+
+
+            <div class="text">
+                <h2 class="text__title">Kardiler</h2>
+                <h3 class="text__subtitle">Why choose us</h3>
+                <p class="text__descrpt">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                    tempor incididunt
+                    ut labore et dolore magna aliqua.</p>
             </div>
-            <div class="skills__item">
-                <div class="skills__img">
-                    <img class="skills__img-icon" src="/img/skill-2.svg" alt="">
+            <div class="skills">
+                <div class="skills__item">
+                    <div class="skills__img">
+                        <img class="skills__img-icon" src="/img/skill-1.svg" alt="">
+                    </div>
+                    <h2 class="skills__title">The best price that you really expect</h2>
+                    <p class="skills__subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                        exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
                 </div>
-                <h2 class="skills__title">Support ready 24/7 to serve you</h2>
-                <p class="skills__subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                    exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-            </div>
-            <div class="skills__item">
-                <div class="skills__img">
-                    <img class="skills__img-icon" src="/img/skill-3.svg" alt="">
+                <div class="skills__item">
+                    <div class="skills__img">
+                        <img class="skills__img-icon" src="/img/skill-2.svg" alt="">
+                    </div>
+                    <h2 class="skills__title">Support ready 24/7 to serve you</h2>
+                    <p class="skills__subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                        exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
                 </div>
-                <h2 class="skills__title">Top brand in the world</h2>
-                <p class="skills__subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                    exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                <div class="skills__item">
+                    <div class="skills__img">
+                        <img class="skills__img-icon" src="/img/skill-3.svg" alt="">
+                    </div>
+                    <h2 class="skills__title">Top brand in the world</h2>
+                    <p class="skills__subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                        exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                </div>
             </div>
         </div>
     </section>
 
     <!--./ADVANTAGES-->
 
-    <section class="testimonials bg-dark">
+    <section class="testimonials bg-dark" id="testimonials">
 
         <div class="container_small">
             <div class="testimonials__header">
@@ -345,7 +420,6 @@
                 </div>
 
                 <div class="testmnls-slider">
-
                     <div class="testmnls-slider__item">
                         <p class="testmnls-slider__text">
                             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
@@ -354,8 +428,7 @@
                             laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
                             voluptate velit esse cillum dolore eu fugiat nulla pariatur”
                         </p>
-                        <div class="testmnls-slider__img slider__img_1">
-                        </div>
+                        <div class="testmnls-slider__img slider__img_1"></div>
                         <div class="testmnls-slider__decoration">
                             <img class="testmnls-slider__icon" src="/img/testimonials-slider.svg" alt="">
                         </div>
@@ -369,12 +442,12 @@
                             laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
                             voluptate velit esse cillum dolore eu fugiat nulla pariatur”
                         </p>
-                        <div class="testmnls-slider__img slider__img_2">
-                        </div>
+                        <div class="testmnls-slider__img slider__img_2"></div>
                         <div class="testmnls-slider__decoration">
                             <img class="testmnls-slider__icon " src="/img/testimonials-slider.svg" alt="">
                         </div>
                     </div>
+
 
                     <div class="testmnls-slider__item">
                         <p class="testmnls-slider__text">
@@ -384,8 +457,7 @@
                             laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
                             voluptate velit esse cillum dolore eu fugiat nulla pariatur”
                         </p>
-                        <div class="testmnls-slider__img slider__img_3">
-                        </div>
+                        <div class="testmnls-slider__img slider__img_3"></div>
                         <div class="testmnls-slider__decoration">
                             <img class="testmnls-slider__icon" src="/img/testimonials-slider.svg" alt="">
                         </div>
@@ -395,9 +467,9 @@
 
                 <div class="badges">
                     <div class="badges__header">
-                        <div class="badges__cicle badges__cicle_left"></div>
-                        <div class="badges__cicle badges__cicle_mid"></div>
-                        <div class="badges__cicle badges__cicle_right"></div>
+                        <div class="badges__circle badges__circle_left"></div>
+                        <div class="badges__circle badges__circle_mid"></div>
+                        <div class="badges__circle badges__circle_right"></div>
                     </div>
 
                     <div class="badges__footer">
@@ -432,17 +504,21 @@
     </section>
 
     <!--./TESTIMONIALS-->
-    <footer class="footer bg-dark">
+    <footer class="footer bg-dark" id="footer">
         <div class="container">
             <div class="footer__inner">
-                <div class="footer__column">
+                <div class="footer__column footer__column_1">
                     <div class="footer__text">
-                        <h1 class="logo"><span style="color: #FFD600">KAR</span>BOX</h1>
+                        <div class="footer__text_logo">
+                            <a href="#">
+                                <h1 class="logo"><span style="color: #FFD600">KAR</span>BOX</h1>
+                            </a>
+                        </div>
                         <p class="footer__subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                             eiusmod
                             tempor incididunt ut labore et dolore magna aliqua.</p>
                     </div>
-                    <div class="footer__social social">
+                    <div class="social">
                         <h2 class="social__text">Follow Us</h2>
                         <div class="social__wrapper">
                             <div class="social__img">
@@ -464,7 +540,7 @@
                     </div>
                 </div>
 
-                <div class="footer__column">
+                <div class="footer__column footer__column_2">
                     <ul class="menu__list">
                         <li class="menu__item_title"><a href="" class="menu__link">Quick Links</a></li>
                         <li class="menu__item"><a href="" class="menu__link">Home</a></li>
@@ -475,7 +551,7 @@
                     </ul>
                 </div>
 
-                <div class="footer__column">
+                <div class="footer__column footer__column_3">
                     <ul class="menu__list">
                         <li class="menu__item_title"><a href="" class="menu__link">Support</a></li>
                         <li class="menu__item"><a href="" class="menu__link">Affiliates</a></li>
@@ -485,8 +561,7 @@
                         <li class="menu__item"><a href="" class="menu__link">Legal Disclaimer</a></li>
                     </ul>
                 </div>
-
-                <div class="footer__column">
+                <div class="footer__column footer__column_4">
                     <div class="footer-input">
                         <div class="footer-input__text">
                             <h2 class="footer-input__title">Subscribe</h2>
@@ -495,11 +570,22 @@
                                 eiusmod tempor incididunt ut</p>
                         </div>
                         <div class="footer-input__buttons">
-                            <input class="" name="email" placeholder="Enter your email here" type="email">
+                            <input class="" name="email" style="text-transform: lowercase"
+                                placeholder="Enter your email here" type="email"
+                                pattern="[a-zA-Z0-9.!#$%&amp;’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)+"
+                                required>
                             <button class="btn btn--input">Send</button>
                         </div>
                     </div>
                 </div>
+                <select class="footer__column_media">
+                    <option>Support</option>
+                    <option>Affiliates</option>
+                    <option>Sitemap</option>
+                    <option>Cancelation Policy</option>
+                    <option>Privacy Policy</option>
+                    <option>Legal Disclaimer</option>
+                </select>
             </div>
         </div>
 
@@ -508,7 +594,6 @@
         </div>
 
     </footer>
-
 
 
 

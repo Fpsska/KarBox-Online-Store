@@ -60,3 +60,28 @@ $(function () {
 });
 
 
+
+$('#vendor__slider').slick({
+    dots: false,
+    arrows: false,
+    infinite: true,
+    speed: 300,
+    slidesToShow: 1,
+    adaptiveHeight: true
+});
+$('#vendor__slider-mobile').slick({
+    dots: false,
+    arrows: false,
+    infinite: true,
+    speed: 300,
+    slidesToShow: 1,
+    adaptiveHeight: true
+});
+// $('#fullpage', {
+//     scrollingSpeed: 3000,
+//     easing: 'easeInOutCubic',
+//     autoScrolling: true,
+//     scrollHorizontally: true,
+//     anchors: ['home', 'about', 'products', 'testimonials', 'footer'],
+//     menu: '#header__menu'
+// });
