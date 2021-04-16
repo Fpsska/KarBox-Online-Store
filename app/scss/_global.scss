@@ -183,6 +183,7 @@ body {
     background-position: center;
     background-repeat: no-repeat;
     outline: 1px solid $dark;
+    // max-width: 820px;
     width: 820px;
     height: 550px;
 }
@@ -307,22 +308,12 @@ body {
     }
 }
 
+.text_first {
+    padding: 5em 0 10em 0 !important;
+}
+
 .response-wrapper {
     padding-bottom: 7em;
-}
-
-.text_indent {
-    // УБРАТЬ, возможно обращение к элементу внутри родительского блока
-    padding: 15% 0;
-}
-
-.indent {
-    /*+OTHER BLOCK*/
-    margin: 10em auto 5em auto;
-}
-
-.indent_btm {
-    margin-bottom: 5em;
 }
 
 .descrpt_full {
@@ -788,7 +779,7 @@ body {
     color: $dark;
     display: flex;
     width: 32%;
-    height: 150px;
+    // min-height: 150px;
     padding: 2% 2%;
     align-items: center;
     justify-content: space-between;
