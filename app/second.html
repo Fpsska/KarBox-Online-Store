@@ -13,25 +13,42 @@
     <header class="header bg-dark">
         <div class="container_big">
             <div class="bar">
-                <a href="#" class="logo">
-                    <img src=""><span style="color: #FFD600">KAR</span>BOX
+                <a href="#">
+                    <h1 class="logo"><span style="color: #FFD600">KAR</span>BOX</h1>
                 </a>
-                <nav class="menu">
+                <nav class="menu header__menu">
                     <ul class="menu__list">
-                        <li class="menu__item"><a href="" class="menu__link">Home</a></li>
-                        <li class="menu__item"><a href="" class="menu__link">About</a></li>
-                        <li class="menu__item"><a href="" class="menu__link">Services</a></li>
-                        <li class="menu__item active"><a href="" class="menu__link">Collections</a></li>
-                        <li class="menu__item"><a href="" class="menu__link">Blog</a></li>
+                        <li class="menu__item" data-menuanchor="home"><a href="#home" class="menu__link">Home</a></li>
+                        <li class="menu__item" data-menuanchor="about"><a href="#about" class="menu__link">About</a>
+                        </li>
+                        <li class="menu__item" data-menuanchor=""><a href="#" class="menu__link">Services</a></li>
+                        <li class="menu__item active" data-menuanchor="products"><a href="#products"
+                                class="menu__link">Collections</a></li>
+                        <li class="menu__item" data-menuanchor="testimonials"><a href="#testimonials"
+                                class="menu__link">Blog</a></li>
                     </ul>
                 </nav>
-                <button class="btn btn--black" href="">Contact us</button>
+                <button class="btn btn--black">Contact us</button>
+            </div>
+
+            <div class="bar-mobile bar-mobile_home">
+                <a href="#">
+                    <h1 class="logo"><span style="color: #FFD600">KAR</span>BOX</h1>
+                </a>
+                <nav class="menu header__menu">
+                    <ul class="menu__list">
+                        <li class="menu__item active" data-menuanchor="home"><a href="#home"
+                                class="menu__link">Collections</a>
+                        </li>
+                    </ul>
+                </nav>
+                <button class="btn btn--black" data-menuanchor="footer">Contact us</button>
             </div>
         </div>
 
         <div class="container_description">
             <div class="header__inner">
-                <div class="text text_indent">
+                <div class="text text_second">
                     <h2 class="text__title text__title_yellow">COLLECTIONS</h2>
                     <h3 class="text__subtitle">Find your dream car here</h3>
                     <p class="text__descrpt">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
@@ -39,50 +56,62 @@
                         ut labore et dolore magna aliqua.</p>
                 </div>
 
-                <div class="selection-wrapper container_small">
-                    <div class="selection">
+                <div class="selection container_small">
+
+                    <div class="selection__wrapper">
                         <div class="selection__column">
                             <h2 class="selection__title feature">Brand</h2>
-                            <p class="selection__vaulueBrad value">PORCE</p>
+                            <p class="selection__valueBrad value">PORCE</p>
                         </div>
 
                         <div class="selection__column">
                             <h2 class="selection__title feature">Сlass</h2>
-                            <p class="selection__vaulueClass value">Choose</p>
+                            <p class="selection__valueClass value">Choose</p>
                         </div>
 
                         <div class="selection__column">
                             <h2 class="selection__title feature">Model</h2>
-                            <p class="selection__vaulueModel value">Choose</p>
+                            <p class="selection__valueModel value">Choose</p>
                         </div>
 
                         <div class="selection__column">
                             <h2 class="selection__title feature">Year</h2>
-                            <p class="selection__vaulueYear value">Choose</p>
+                            <p class="selection__valueYear value">Choose</p>
                         </div>
                     </div>
 
                     <div class="selection__btn">
                         <button class="btn btn--yellow">FIND</button>
                     </div>
+
                 </div>
             </div>
         </div>
     </header>
     <!-- /.HEADER -->
-    <section class="products">
+    <section class="products_second">
         <div class="products__inner container">
+
             <div class="products__sort">
-
-                <div class="sort__relult">
+                <div class="sort">
                     <h2 class="relult_text">Showing 9 from 98 result</h2>
+                    <div class="sort__option">
+                        <h3 class="sort__text">Sort by</h3>
+                        <p class="option_text">Newest</p>
+                    </div>
                 </div>
+            </div>
 
-                <div class="sort__option">
-                    <h3 class="sort__text">Sort by</h3>
-                    <p class="option_text">Newest</p>
+            <div class="products__sort_mobile">
+                <div class="sort">
+                    <div class="sort__relult">
+                        <h2 class="relult_text">Showing 9 from 98 result</h2>
+                    </div>
+                    <div class="sort__option">
+                        <h3 class="sort__text">Sort by</h3>
+                        <p class="option_text">Newest</p>
+                    </div>
                 </div>
-
             </div>
 
             <div class="card__slider">
@@ -547,21 +576,21 @@
     </section>
     <!-- /.RESPONSE -->
 
-    <footer class="footer bg-dark">
+    <footer class="footer bg-dark" id="footer">
         <div class="container">
             <div class="footer__inner">
-                <div class="footer__column">
+                <div class="footer__column footer__column_1">
                     <div class="footer__text">
                         <div class="footer__text_logo">
-                            <a href="#" class="logo">
-                                <img src=""><span style="color: #FFD600">KAR</span>BOX
+                            <a href="#">
+                                <h1 class="logo"><span style="color: #FFD600">KAR</span>BOX</h1>
                             </a>
                         </div>
                         <p class="footer__subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                             eiusmod
                             tempor incididunt ut labore et dolore magna aliqua.</p>
                     </div>
-                    <div class="footer__social social">
+                    <div class="social">
                         <h2 class="social__text">Follow Us</h2>
                         <div class="social__wrapper">
                             <div class="social__img">
@@ -583,7 +612,7 @@
                     </div>
                 </div>
 
-                <div class="footer__column">
+                <div class="footer__column footer__column_2">
                     <ul class="menu__list">
                         <li class="menu__item_title"><a href="" class="menu__link">Quick Links</a></li>
                         <li class="menu__item"><a href="" class="menu__link">Home</a></li>
@@ -594,7 +623,7 @@
                     </ul>
                 </div>
 
-                <div class="footer__column">
+                <div class="footer__column footer__column_3">
                     <ul class="menu__list">
                         <li class="menu__item_title"><a href="" class="menu__link">Support</a></li>
                         <li class="menu__item"><a href="" class="menu__link">Affiliates</a></li>
@@ -604,8 +633,7 @@
                         <li class="menu__item"><a href="" class="menu__link">Legal Disclaimer</a></li>
                     </ul>
                 </div>
-
-                <div class="footer__column">
+                <div class="footer__column footer__column_4">
                     <div class="footer-input">
                         <div class="footer-input__text">
                             <h2 class="footer-input__title">Subscribe</h2>
@@ -614,11 +642,22 @@
                                 eiusmod tempor incididunt ut</p>
                         </div>
                         <div class="footer-input__buttons">
-                            <input class="" name="email" placeholder="Enter your email here" type="email">
+                            <input class="" name="email" style="text-transform: lowercase"
+                                placeholder="Enter your email here" type="email"
+                                pattern="[a-zA-Z0-9.!#$%&amp;’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)+"
+                                required>
                             <button class="btn btn--input">Send</button>
                         </div>
                     </div>
                 </div>
+                <select class="footer__column_media">
+                    <option>Support</option>
+                    <option>Affiliates</option>
+                    <option>Sitemap</option>
+                    <option>Cancelation Policy</option>
+                    <option>Privacy Policy</option>
+                    <option>Legal Disclaimer</option>
+                </select>
             </div>
         </div>
 

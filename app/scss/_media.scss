@@ -57,6 +57,13 @@
         margin: 10em 0 5em 0;
     }
     // /.MAIN PAGE
+    // .selection__wrapper {
+    //     left: 7%;
+    //     top: 83% !important;
+    // }
+    .relult_text {
+        padding-left: 0.5em;
+    }
 }
 
 @media (max-width: 1550px) {
@@ -70,6 +77,9 @@
         left: -6% !important;
     }
     // /.MAIN PAGE
+    .selection {
+        left: 6%;
+    }
 }
 
 @media (max-width: 1500px) {
@@ -83,6 +93,23 @@
         left: 0% !important;
     }
     // /.MAIN PAGE
+    // .selection__wrapper {
+    //     left: 5.5% !important;
+    // }
+    .card__slider-item {
+        justify-content: space-evenly !important;
+    }
+    .selection {
+        left: 4.5%;
+    }
+    .selection__btn {
+        padding: 1.5em 2em !important;
+    }
+    .selection__column {
+        &::after {
+            left: 45% !important;
+        }
+    }
 }
 
 @media (max-width: 1400px) {
@@ -121,13 +148,23 @@
         padding: 1em 1em !important;
     }
     .skills_black__img {
-    height: 70px;
-    width: 70px;
-    min-width: 70px;
+        height: 70px;
+        width: 70px;
+        min-width: 70px;
     }
     .skills_black__img-icon {
         top: 27%;
         left: 27%;
+    }
+    // /.FIRST PAGE
+    .selection {
+        width: 90%;
+        left: 5% !important;
+    }
+    .selection__column {
+        &::after {
+            left: 50% !important;
+        }
     }
 }
 
@@ -149,6 +186,11 @@
         }
     }
     // /.MAIN PAGE
+    .selection__column {
+        &::after {
+            left: 55% !important;
+        }
+    }
 }
 
 @media (max-width: 1325px) {
@@ -163,7 +205,12 @@
     }
     // /.MAIN PAGE
     .skills_black__title {
-        padding-left: .5em;
+        padding-left: 0.5em;
+    }
+    .selection__column {
+        &::after {
+            left: 60% !important;
+        }
     }
 }
 
@@ -264,6 +311,12 @@
         display: none;
     }
     // /.MAIN PAGE
+    .selection__wrapper {
+        padding: 1em 1em !important;
+    }
+    .selection__btn {
+        padding: 1.5em 1em 1.5em 0 !important;
+    }
 }
 
 @media (max-width: 1150px) {
@@ -347,6 +400,9 @@
         left: 50% !important;
     }
     // /.MAIN PAGE
+    .btn--yellow {
+        font-size: 18px !important;
+    }
 }
 
 @media (max-width: 1024px) {
@@ -485,7 +541,7 @@
     }
     // /.MAIN PAGE
     .about_first {
-        padding: 15em 0 5em 0 !important; 
+        padding: 15em 0 5em 0 !important;
     }
     .text_first {
         padding: 5em 0 10em 0 !important;
@@ -497,7 +553,7 @@
         margin-right: 0 !important;
         width: 100%;
     }
-    .about__img_history  {
+    .about__img_history {
         width: 100%;
     }
     .skills_small {
@@ -505,6 +561,21 @@
     }
     .response-wrapper {
         margin-top: 2em;
+    }
+    // /.FIRST PAGE
+    .text_second {
+        padding: 5em 0 14em 0 !important;
+    }
+    .relult_text {
+        font-size: 24px;
+    }
+    .card__box {
+        margin-top: 3em !important;
+    }
+    .selection__column {
+        &::after {
+            left: 65% !important;
+        }
     }
 }
 
@@ -536,6 +607,15 @@
         }
     }
     // /.MAIN PAGE
+    .btn--yellow {
+        width: 15em !important;
+    }
+    .selection__wrapper {
+        padding: 1em 0 1em 1em !important;
+    }
+    .products_second {
+        margin: 12em 0 10em 0 !important;
+    }
 }
 
 @media (max-width: 840px) {
@@ -643,7 +723,14 @@
         height: 100vh !important;
     }
     // /.MAIN PAGE
-
+    .btn--yellow {
+        width: 12em !important;
+    }
+    .selection__column {
+        &::after {
+            left: 65% !important;
+        }
+    }
 }
 
 @media (max-width: 768px) {
@@ -655,6 +742,9 @@
     }
     .btn--white {
         font-size: 12px !important;
+    }
+    .header__menu .menu__item {
+        margin-right: 0 !important;
     }
     .information__title {
         margin: 0 !important;
@@ -717,7 +807,27 @@
         left: 85.8% !important;
     }
     // /.MAIN PAGE
+    .relult_text {
+        font-size: 22px;
+    }
+    .value {
+        font-size: 16px !important;
+    }
+    .selection {
+        top: 90% !important;
+    }
+    .selection__btn {
+        padding: 1.2em 1em 1.2em 0 !important;
+    }
+    .btn--yellow {
+        width: 10em !important;
+        font-size: 16px !important;
+    }
+    .sort__text {
+        margin-right: 2.5em;
+    }
 }
+
 @media (max-width: 678px) {
     .advantages {
         margin: 8em 0 5em 0 !important;
@@ -798,10 +908,70 @@
     }
     .skills_black__title {
         padding-left: 0;
-        margin-top: .5em;
+        margin-top: 0.5em;
     }
     .about_first {
         padding: 15em 0 0 0 !important;
+    }
+    .relult_text {
+        font-size: 18px;
+    }
+    .sort__text {
+        margin-right: 1.5em;
+    }
+    .selection {
+        flex-direction: column !important;
+    }
+    .selection__btn {
+        //display: none;
+        padding: 0 0 .5em 0 !important;
+    }
+    .btn--yellow {
+        padding: 1.1em 1.5em !important; 
+    }
+    .selection__wrapper {
+        padding: 1em 1em !important;
+        justify-content: space-around !important;
+    }
+    .selection__column {
+        width: auto !important;
+        &::after {
+            left: 110% !important;
+        }
+    }
+    .products_second {
+        margin: 10em 0 10em 0 !important;
+    }
+    .products__sort {
+        display: none;
+    }
+    .products__sort_mobile {
+        display: block;
+    }
+    .sort {
+        display: flex;
+        flex-direction: column;
+    }
+    .sort__relult {
+        width: 100%;
+    }
+    // .relult_text {
+    //     text-align: start;
+    // }
+    // .sort__option {
+    //     margin: 0 0 0 auto;
+    //     padding: 0 3em 0 0 !important;
+    // }
+    .relult_text {
+        text-align: center;
+        padding-left: 0 ;
+    }
+    .sort__option {
+        padding: 0 !important;
+        &::after {
+            top: 35%;
+            left: 107% !important;
+        }
     }
 }
 
@@ -1044,6 +1214,31 @@
     .advantages_first {
         margin: 5em 0 5em 0 !important;
     }
+    .value {
+        font-size: 15px !important;
+    }
+    .selection__wrapper {
+        // padding: .85em 0!important;
+        justify-content: space-around !important;
+    }
+    .selection__column {
+        &::after {
+            top: 62% !important;
+            left: 105% !important;
+        }
+    }
+    .selection__valueBrad {
+        font-size: 14px !important;
+    }
+    .selection__valueClass {
+        font-size: 14px !important;
+    }
+    .selection__valueModel {
+        font-size: 14px !important;
+    }
+    .selection__valueYear {
+        font-size: 14px !important;
+    }
 }
 
 @media (max-width: 411px) {
@@ -1219,7 +1414,7 @@
         max-width: 100%;
     }
     .testimonials {
-        padding: 5em 0px 2em !important;
+        padding: 5em 0 2em 0 !important;
         .text {
             &::before {
                 display: none;
@@ -1275,6 +1470,11 @@
         max-width: 100% !important;
     }
     // /.MAIN PAGE
+    .bar-mobile {
+        .logo {
+            font-size: 16px !important;
+        }
+    }
     .about_first {
         padding: 12em 0 2em 0 !important;
     }
@@ -1284,6 +1484,48 @@
     .skills_small {
         flex-direction: row !important;
         top: 75% !important;
+    }
+    .text_second {
+        padding: 5em 0 10em 0 !important;
+    }
+    .pagination__inner {
+        padding: 0 0.5em;
+    }
+    .pagination__items {
+        padding-right: 0.5em;
+    }
+    .pagntn__btn {
+        font-size: 15.5px !important;
+    }
+    .selection {
+        width: 94%;
+        left: 3% !important;
+    }    
+    .selection__wrapper {
+        padding: .85em .65em .85em 0 !important;
+    }
+    .selection__column {
+        &::after {
+            content: url(../img/selection-arrw_MB.svg) !important;
+            left: 105% !important;
+            top: 60% !important;
+        }
+    }
+    .selection__valueBrad {
+        font-size: 13px !important;
+    }
+    .selection__valueClass {
+        font-size: 13px !important;
+    }
+    .selection__valueModel {
+        font-size: 13px !important;
+    }
+    .selection__valueYear {
+        font-size: 13px !important;
+    }
+    .btn--yellow {
+        padding: .75em !important;
+        font-size: 14px !important;
     }
 }
 
@@ -1309,7 +1551,19 @@
     .badges__circle_right {
         left: 62% !important;
     }
+    .testimonials {
+        padding: 5em 0 4em 0 !important;
+    }
     // /.MAIN PAGE
+    .bar-mobile {
+        .logo {
+            font-size: 16px !important;
+            margin-left: .3em !important;
+        }
+    }
+    .btn--black {
+        margin-right: .3em !important;
+    }
     .about_first {
         padding: 15em 0 2em 0 !important;
     }
@@ -1319,7 +1573,13 @@
     .advantages_first {
         margin: 5em 0 1em 0 !important;
     }
+    .footer__text_logo {
+        .logo {
+            margin-bottom: 0 !important;
+        }
+    }
     .response-wrapper {
         margin-top: 2em;
+        padding-bottom: 4em !important;
     }
 }

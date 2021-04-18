@@ -112,7 +112,8 @@ $light-gray: #f9f9f9;
 }
 
 .container_small {
-    max-width: 1339px;
+    max-width: 1345px;
+    width: 100%;
     margin: 0 auto;
 }
 
@@ -194,7 +195,6 @@ body {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    // outline: 1px solid $dark;
 }
 
 .header_light {
@@ -311,6 +311,15 @@ body {
 .text_first {
     padding: 5em 0 10em 0 !important;
 }
+
+.text_second {
+    padding: 5em 0 15em 0 !important;
+}
+
+.products_second {
+    margin: 15em 0 10em 0;
+}
+
 
 .response-wrapper {
     padding-bottom: 7em;
