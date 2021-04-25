@@ -11,29 +11,58 @@
 
 <body>
     <header class="header">
+
         <div class="container_big">
             <div class="bar">
-                <a href="#" class="logo">
-                    <img src=""><span style="color: #FFD600">KAR</span>BOX
+                <a href="#">
+                    <h1 class="logo"><span style="color: #FFD600">KAR</span>BOX</h1>
                 </a>
-                <nav class="menu">
+                <nav class="menu header__menu" id="header__menu">
                     <ul class="menu__list">
-                        <li class="menu__item"><a href="" class="menu__link">Home</a></li>
-                        <li class="menu__item"><a href="" class="menu__link">About</a></li>
-                        <li class="menu__item active"><a href="" class="menu__link">Services</a></li>
-                        <li class="menu__item"><a href="" class="menu__link">Collections</a></li>
-                        <li class="menu__item"><a href="" class="menu__link">Blog</a></li>
+                        <li class="menu__item" data-menuanchor="home"><a href="#home"
+                                class="menu__link">Home</a></li>
+                        <li class="menu__item" data-menuanchor="about"><a href="#about" class="menu__link">About</a>
+                        </li>
+                        <li class="menu__item active" data-menuanchor=""><a href="#" class="menu__link">Services</a></li>
+                        <li class="menu__item" data-menuanchor="products"><a href="#products"
+                                class="menu__link">Collections</a></li>
+                        <li class="menu__item" data-menuanchor="testimonials"><a href="#testimonials"
+                                class="menu__link">Blog</a></li>
                     </ul>
                 </nav>
-                <button class="btn btn--black">Contact us</button>
+                <button class="btn btn--black" href="">Contact us</button>
             </div>
+
+            <div class="bar-mobile bar-mobile_home">
+                <a href="#">
+                    <h1 class="logo"><span style="color: #FFD600">KAR</span>BOX</h1>
+                </a>
+                <nav class="menu header__menu" id="header__menu">
+                    <ul class="menu__list">
+                        <li class="menu__item active" data-menuanchor="home"><a href="#home"
+                                class="menu__link">Services</a>
+                        </li>
+                    </ul>
+                </nav>
+                <button class="btn btn--black" data-menuanchor="footer">Contact us</button>
+            </div>
+
+            <div class="text text_fourth">
+                <h3 class="text__subtitle">SERVICES</h3>
+                <p class="text__descrpt">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                    do eiusmod
+                    tempor incididunt
+                    ut labore et dolore magna aliqua.</p>
+            </div>
+
         </div>
+
     </header>
     <!-- /.HEADER -->
 
     <section class="services">
 
-        <div class="services__section_1 bg-dark">
+        <!-- <div class="services__section_1 bg-dark">
             <div class="text">
                 <h3 class="text__subtitle">SERVICES</h3>
                 <p class="text__descrpt">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
@@ -41,7 +70,7 @@
                     tempor incididunt
                     ut labore et dolore magna aliqua.</p>
             </div>
-        </div>
+        </div> -->
 
         <div class="services__section_2">
 
@@ -108,7 +137,7 @@
         <div class="services__section_4 container_description">
             <div class="about">
                 <div class="img about__img_team"></div>
-                <div class="about__text about__text_center">
+                <div class="about__text about__text_fourt">
                     <h2 class="about__title">ABOUT US</h2>
                     <h3 class="about__subtitle">Kardiler is the best place to get your dream car</h3>
                     <p class="about__descrpt">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
@@ -197,10 +226,11 @@
 
                         <div class="badges">
                             <div class="badges__header">
-                                <div class="badges__cicle badges__cicle_left"></div>
-                                <div class="badges__cicle badges__cicle_mid"></div>
-                                <div class="badges__cicle badges__cicle_right"></div>
+                                <div class="badges__circle badges__circle_left"></div>
+                                <div class="badges__circle badges__circle_mid"></div>
+                                <div class="badges__circle badges__circle_right"></div>
                             </div>
+        
                             <div class="badges__footer">
                                 <h2 class="badges__title">Rajuu Sigh</h2>
                                 <p class="badges__subtitle">Businessman</p>

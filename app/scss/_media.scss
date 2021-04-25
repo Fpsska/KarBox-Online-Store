@@ -166,9 +166,9 @@
     .advantages {
         margin: 5em 0 5em 0 !important;
     }
-    .testimonials {
-        padding: 8em 0 2em 0 !important;
-    }
+    // .testimonials {
+    //     padding: 8em 0 0 0 !important;
+    // }
     .overview {
         padding: 2em 0 !important;
     }
@@ -619,6 +619,9 @@
     .text {
         padding: 0.5em !important;
     }
+    .text_fourth {
+        padding: 6em 0 !important;
+    }
     .btn--black {
         font-size: 14px;
     }
@@ -771,6 +774,9 @@
     .slider-arw__header_left {
         left: 88.7% !important;
     }
+    .img {
+        height: 100vh !important;
+    }
     .advantages {
         .text {
             &::before {
@@ -813,6 +819,9 @@
         font-size: 14px !important;
         margin-bottom: 0 !important;
     }
+    // .video {
+    //     height: 50vh !important;
+    // }
     .btn--white {
         font-size: 14px !important;
         max-width: 11em !important;
@@ -902,9 +911,10 @@
     .footer-input__title {
         margin-bottom: 0 !important;
     }
-    .img {
-        height: 100vh !important;
-    }
+    // .img {
+    //     height: 100vh !important;
+    //     height: 50vh !important;
+    // }
     // /.MAIN PAGE
     .btn--yellow {
         width: 12em !important;
@@ -916,7 +926,8 @@
     }
     // /.SECOND PAGE
     .about__img_big {
-        height: 100vh !important;
+        // height: 100vh !important;
+        height: 50vh !important;
     }
     .card__price_third {
         left: 45%;
@@ -950,6 +961,9 @@
     .information__price {
         margin: 0.5em 0 0 2.3em !important;
     }
+    // .img {
+    //     height: 50vh !important;
+    // }
     .products {
         .text {
             &::before {
@@ -1033,6 +1047,9 @@
 }
 
 @media (max-width: 678px) {
+    .img {
+        height: 100vh !important;
+    }
     .advantages {
         margin: 8em 0 5em 0 !important;
         .text {
@@ -1127,7 +1144,6 @@
         flex-direction: column !important;
     }
     .selection__btn {
-        //display: none;
         padding: 0 0 0.5em 0 !important;
     }
     .btn--yellow {
@@ -1177,6 +1193,22 @@
             left: 107% !important;
         }
     }
+    // /.THIRD PAGE
+    .services__section_2 {
+        .skills {
+            flex-direction: column;
+            :nth-child(3) {
+                margin-bottom: 0;
+            }
+        }
+    }
+    .skills__item {
+        max-width: 100% !important;
+        margin-bottom: 5em;
+    }
+    .skills__img {
+        margin: 0 auto 2em auto;
+    }
 }
 
 @media (max-width: 600px) {
@@ -1186,6 +1218,10 @@
     .information__descrpt {
         font-size: 10px !important;
         line-height: 14px;
+    }
+    .img {
+        height: 100vh !important;
+        //height: 50vh !important;
     }
     .slick-dots {
         top: 90% !important;
@@ -1280,6 +1316,19 @@
 @media (max-width: 520px) {
     .information {
         height: 320px !important;
+    }
+    .services__section_1 {
+        padding: 4em .5em;
+    }
+    .services__section_2 {
+        padding: 6em 0 5em 0;
+    }
+    .services__section_5 {
+        margin-top: 0;
+    }
+    .img {
+        // height: 100vh !important;
+        height: 50vh !important;
     }
     .advantages {
         .text {
@@ -1610,6 +1659,9 @@
     .text {
         padding: 0 !important;
     }
+    .text_fourth {
+        padding: 4em 0 !important;
+    }
     .products {
         .text {
             &::before {
@@ -1865,6 +1917,9 @@
     }
     .card__price_third {
         left: 55%;
+    }
+    .testimonials {
+        padding: 1em 0 0 0 !important;
     }
 }
 

@@ -110,6 +110,11 @@ $light-gray: #f9f9f9;
     text-align: center;
 }
 
+.text_fourth {
+    padding: 8em 0;
+    color: #fff;
+}
+
 .container {
     max-width: 1600px;
     margin: 0 auto;
@@ -245,7 +250,8 @@ body {
     background-color: $dark;
     text-transform: uppercase;
     align-items: center;
-    height: 140px;
+    // height: 140px;
+    padding: 2em 0;
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -795,6 +801,7 @@ body {
         }
     }
     &__section_5 {
+        margin-top: 5em;
         .testmnls-slider__item {
             background: rgba(0, 0, 0, 0.08) !important;
         }
@@ -1079,7 +1086,6 @@ body {
     position: relative;
     .text {
         position: relative;
-        //max-width: auto;
         margin-bottom: 60px;
         &__title {
             text-transform: uppercase;
@@ -1109,7 +1115,8 @@ body {
     }
     &__img {
         width: 35%;
-        height: 350px;
+        // height: 350px;
+        min-height: 350px;
         margin: 0 0 0 auto;
         background-size: cover;
         background-position: center;
@@ -1131,7 +1138,7 @@ body {
         display: flex !important;
         align-items: center !important;
         width: 1200px;
-        height: 350px;
+        // height: 350px;
         background-color: rgb(61, 61, 61);
     }
     .slider__img_1 {
