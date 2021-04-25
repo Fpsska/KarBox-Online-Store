@@ -12,30 +12,49 @@
 <body>
     <header class="header bg-light">
         <div class="container_big">
+
             <div class="bar bar_light">
-                <a href="#" class="logo">
-                    <img src=""><span style="color: #FFD600">KAR</span><span style="color: #000">BOX</span>
+                <a href="#">
+                    <h1 class="logo"><span style="color: #FFD600">KAR</span><span style="color: #000000">BOX</span></h1>
                 </a>
-                <nav class="menu">
+                <nav class="menu header__menu" id="header__menu">
                     <ul class="menu__list">
-                        <li class="menu__item"><a href="" class="menu__link">Home</a></li>
-                        <li class="menu__item active"><a href="" class="menu__link">About</a></li>
-                        <li class="menu__item"><a href="" class="menu__link">Services</a></li>
-                        <li class="menu__item"><a href="" class="menu__link">Collections</a></li>
-                        <li class="menu__item"><a href="" class="menu__link">Blog</a></li>
+                        <li class="menu__item active" data-menuanchor="home"><a href="#home" class="menu__link">Home</a>
+                        </li>
+                        <li class="menu__item" data-menuanchor="about"><a href="#about" class="menu__link">About</a>
+                        </li>
+                        <li class="menu__item" data-menuanchor=""><a href="#" class="menu__link">Services</a></li>
+                        <li class="menu__item" data-menuanchor="products"><a href="#products"
+                                class="menu__link">Collections</a></li>
+                        <li class="menu__item" data-menuanchor="testimonials"><a href="#testimonials"
+                                class="menu__link">Blog</a></li>
                     </ul>
                 </nav>
-                <button class="btn btn--gray">Contact us</button>
+                <button class="btn btn--bar" data-menuanchor="footer">Contact us</button>
             </div>
+
+            <div class="bar-mobile bar_light">
+                <a href="#">
+                    <h1 class="logo"><span style="color: #FFD600">KAR</span><span style="color: #000000">BOX</span></h1>
+                </a>
+                <nav class="menu header__menu" id="header__menu">
+                    <ul class="menu__list">
+                        <li class="menu__item active" data-menuanchor="home"><a href="#home"
+                                class="menu__link">About</a>
+                        </li>
+                    </ul>
+                </nav>
+                <button class="btn btn--bar" data-menuanchor="footer">Contact us</button>
+            </div>
+
         </div>
     </header>
     <!-- /.HEADER -->
 
     <section class="bg-lightgray">
+        <!-- bg-dark -->
         <div class="container_description">
-
             <div class="about about_big">
-
                 <div class="about__header">
 
                     <div class="social__wrapper">
@@ -52,31 +71,35 @@
 
                     <div class="position">
                         <div class="position__item">
-                            <h2 class="position__stage">Home</h2>
+                            <h2 class="position__stage position__stage_first">Home</h2>
+                            <img class="position__img" src="./img/slash.svg" alt=" symbol">
+                            <img class="position__img-mobile" src="./img/slash_MB.svg" alt=" symbol">
                         </div>
                         <div class="position__item">
                             <h2 class="position__stage">Car Collections</h2>
+                            <img class="position__img" src="./img/slash.svg" alt=" symbol">
+                            <img class="position__img-mobile" src="./img/slash_MB.svg" alt=" symbol">
                         </div>
                         <div class="position__item">
-                            <h2 class="position__stage_last">SMART GT AA-211</h2>
+                            <h2 class="position__stage position__stage_last active">SMART GT AA-211</h2>
                         </div>
                     </div>
 
                     <div class="about__info">
 
-                        <div class="about__section_1">
-                            <div class="about__img_big"></div>
-                        </div>
-    
+                        <div class="about__img_big"></div>
+                        <!-- /.about__section_1  -->
                         <div class="about__section_2">
+
                             <div class="about__text about__text_center">
-                                <h2 class="about__title">SPORT CAR</h2>
+                                <h2 class="about__title about__title_yellow">SPORT CAR</h2>
                                 <h3 class="about__subtitle">MAUNG SPORT-GT</h3>
-                                <p class="about__descrpt">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                                <p class="about__descrpt">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                                    do
                                     eiusmod
                                     tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
                             </div>
-    
+
                             <div class="card__box_about">
                                 <div class="card__footer bg-lightgray">
                                     <h3 class="feature transmition">Transmition</h3>
@@ -91,85 +114,176 @@
                                     <p class="value ValueAcceleration">4.5s</p>
                                 </div>
                             </div>
-    
+
                             <div class="about__contacts">
                                 <div class="card__price_singly">
                                     <h2 class="price">$599.999</h2>
                                 </div>
-                                <div class=" response-block__phone response-block__phone_black">
+                                <div class="response-block__phone response-block__phone_black">
                                     <img src="/img/phoneicon-white.svg" alt="">
                                     <a href="tel:224000221133">224 000 22 11 33</a>
                                 </div>
                             </div>
-    
+
                         </div>
+
+                        <div class="about__section_2_mobile">
+
+                            <div class="about__text about__text_center">
+                                <h2 class="about__title about__title_yellow">SPORT CAR</h2>
+                                <h3 class="about__subtitle">MAUNG SPORT-GT</h3>
+                                <p class="about__descrpt">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                                    do
+                                    eiusmod
+                                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam</p>
+                            </div>
+
+                            <div class="about__wrapper">
+                                <div class="card__box_about">
+                                    <div class="card__footer bg-lightgray">
+                                        <h3 class="feature transmition">Transmition</h3>
+                                        <p class="value ValueTransmition">Automatic</p>
+                                        <h3 class="feature passenger">Passenger</h3>
+                                        <p class="value ValuePassenger">2 Person</p>
+                                        <h3 class="feature speed">Top Speed</h3>
+                                        <p class="value ValueSpeed">412Km</p>
+                                        <h3 class="feature hp">HP</h3>
+                                        <p class="value ValueHp">560</p>
+                                        <h3 class="feature acceleration">0-1000Km/h</h3>
+                                        <p class="value ValueAcceleration">4.5s</p>
+                                    </div>
+                                </div>
+                                <div class="about__contacts">
+                                    <div class="card__price_singly">
+                                        <h2 class="price">$599.999</h2>
+                                    </div>
+                                    <div class="response-block__phone response-block__phone_black">
+                                        <img src="/img/phoneicon-white.svg" alt="">
+                                        <a href="tel:224000221133">224 000 22 11 33</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <!-- /.about__section_2  -->
                     </div>
                 </div>
-
+                <!-- /.about__header  -->
                 <div class="about__footer">
 
                     <div class="about__section_3">
+
                         <div class="tabs">
                             <div class="tabs__wrapper">
-                
+
                                 <div class="tabs__menu">
-                                    <div class="position">
-                                        <div class="position__item">
-                                            <h2 class="position__stage active">Description</h2>
+                                    <div class="tabs__position">
+                                        <div class="tabs__position-item">
+                                            <h2 class="tabs__position-stage active">Description</h2>
                                         </div>
-                                        <div class="position__item">
-                                            <h2 class="position__stage">Discussion</h2>
+                                        <div class="tabs__position-item">
+                                            <h2 class="tabs__position-stage">Discussion</h2>
                                         </div>
-                                        <div class="position__item">
-                                            <h2 class="position__stage">Reviews</h2>
+                                        <div class="tabs__position-item">
+                                            <h2 class="tabs__position-stage">Reviews</h2>
                                         </div>
                                     </div>
                                 </div>
-                
+
+                                <!-- <div class="tabs__slider"> 
+
+                                    <div class="tabs__slider-item">
+                                        <div class="tabs__position">
+                                            <div class="tabs__position-item">
+                                                <h2 class="tabs__position-stage active">Description</h2>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="tabs__slider-item">
+                                        <div class="tabs__position">
+                                            <div class="tabs__position-item">
+                                                <h2 class="tabs__position-stage active">Description</h2>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="tabs__slider-item">
+                                        <div class="tabs__position">
+                                            <div class="tabs__position-item">
+                                                <h2 class="tabs__position-stage active">Description</h2>
+                                            </div>
+                                        </div>
+                                    </div> 
+
+                                </div> -->
+
                                 <div class="tabs__descrpt">
                                     <div class="text-section">
-                                        <h2 class="tabs__title">The standard Lorem Ipsum passage, used since the 1500s</h2>
-                                        <p class="tabs__subtitle">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                                            laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
-                                            voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
-                                            non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+                                        <h2 class="tabs__title">The standard Lorem Ipsum passage, used since the 1500s
+                                        </h2>
+                                        <p class="tabs__subtitle">"Lorem ipsum dolor sit amet, consectetur adipiscing
+                                            elit, sed do eiusmod tempor incididunt ut
+                                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                                            exercitation ullamco
+                                            laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+                                            reprehenderit in
+                                            voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+                                            occaecat cupidatat
+                                            non proident, sunt in culpa qui officia deserunt mollit anim id est
+                                            laborum."</p>
                                     </div>
-
                                     <div class="text-section">
-                                        <h3 class="tabs__title">Section 1.10.32 of "de Finibus Bonorum et Malorum", written by Cicero in 45 BC</h3>
-                                        <p class="tabs__subtitle">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
-                                            totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae
-                                            dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut
-                                            fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque
-                                            porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia
-                                            non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut
-                                            enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut
-                                            aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate
-                                            velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla
+                                        <h3 class="tabs__title">Section 1.10.32 of "de Finibus Bonorum et Malorum",
+                                            written by Cicero in 45 BC</h3>
+                                        <p class="tabs__subtitle">Sed ut perspiciatis unde omnis iste natus error sit
+                                            voluptatem accusantium doloremque laudantium,
+                                            totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi
+                                            architecto beatae vitae
+                                            dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit
+                                            aspernatur aut odit aut
+                                            fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi
+                                            nesciunt. Neque
+                                            porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur,
+                                            adipisci velit, sed quia
+                                            non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam
+                                            quaerat voluptatem. Ut
+                                            enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit
+                                            laboriosam, nisi ut
+                                            aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui
+                                            in ea voluptate
+                                            velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum
+                                            fugiat quo voluptas nulla
                                             pariatur?
-                                            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                                            laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
-                                            voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
-                                            non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+                                            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                                            tempor incididunt ut
+                                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                                            exercitation ullamco
+                                            laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+                                            reprehenderit in
+                                            voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+                                            occaecat cupidatat
+                                            non proident, sunt in culpa qui officia deserunt mollit anim id est
+                                            laborum."
                                         </p>
                                     </div>
-
                                 </div>
-                                
-                                <div class="tabs__discussion"></div>
-                                <div class="tabs__reviews"></div>
+
+                                <!-- <div class="tabs__discussion"></div>
+                                <div class="tabs__reviews"></div> -->
+
                             </div>
                         </div>
                     </div>
-    
+                    <!-- /.about__section_3  -->
                     <div class="about__section_4">
+
                         <div class="rating">
-                            <h3 class="rating__score">4.5 <span class="rating__score rating__score_second">/ 5.0</span></h3>
+                            <h3 class="rating__score">4.5 <span class="rating__score rating__score_second">/ 5.0</span>
+                            </h3>
                             <h2 class="rating__title">Ratings</h2>
                         </div>
-        
+
                         <div class="gallary">
                             <h2 class="gallary__title">Gallery</h2>
                             <div class="gallary__inner">
@@ -183,11 +297,11 @@
                                 </div>
                             </div>
                         </div>
+
                     </div>
-    
+                    <!-- /.about__section_4  -->
                 </div>
-
-
+                <!-- /.about__footer  -->
                 <div class="about__section_5">
 
                     <div class="text">
@@ -197,12 +311,11 @@
                     <div class="about__slider">
 
                         <div class="about__slider-item">
-            
                             <div class="card__box">
                                 <div class="card__header bg-gray">
                                     <h3 class="rate">4.0</h3>
                                 </div>
-                                <div class="card__price">
+                                <div class="card__price card__price_third">
                                     <h2 class="price">$460.999</h2>
                                 </div>
                                 <div class="card__footer bg-lightgray">
@@ -219,60 +332,14 @@
                                     <p class="value ValueAcceleration">4.5s</p>
                                 </div>
                             </div>
-    
-                            <div class="card__box">
-                                <div class="card__header bg-gray">
-                                    <h3 class="rate">4.0</h3>
-                                </div>
-                                <div class="card__price">
-                                    <h2 class="price">$460.999</h2>
-                                </div>
-                                <div class="card__footer bg-lightgray">
-                                    <h2 class="carModel">GREAT MUSCLE</h2>
-                                    <h3 class="feature transmition">Transmition</h3>
-                                    <p class="value ValueTransmition">Automatic</p>
-                                    <h3 class="feature passenger">Passenger</h3>
-                                    <p class="value ValuePassenger">2 Person</p>
-                                    <h3 class="feature speed">Top Speed</h3>
-                                    <p class="value ValueSpeed">412Km</p>
-                                    <h3 class="feature hp">HP</h3>
-                                    <p class="value ValueHp">560</p>
-                                    <h3 class="feature acceleration">0-1000Km/h</h3>
-                                    <p class="value ValueAcceleration">4.5s</p>
-                                </div>
-                            </div>
-    
-                            <div class="card__box">
-                                <div class="card__header bg-gray">
-                                    <h3 class="rate">4.0</h3>
-                                </div>
-                                <div class="card__price">
-                                    <h2 class="price">$460.999</h2>
-                                </div>
-                                <div class="card__footer bg-lightgray">
-                                    <h2 class="carModel">GREAT MUSCLE</h2>
-                                    <h3 class="feature transmition">Transmition</h3>
-                                    <p class="value ValueTransmition">Automatic</p>
-                                    <h3 class="feature passenger">Passenger</h3>
-                                    <p class="value ValuePassenger">2 Person</p>
-                                    <h3 class="feature speed">Top Speed</h3>
-                                    <p class="value ValueSpeed">412Km</p>
-                                    <h3 class="feature hp">HP</h3>
-                                    <p class="value ValueHp">560</p>
-                                    <h3 class="feature acceleration">0-1000Km/h</h3>
-                                    <p class="value ValueAcceleration">4.5s</p>
-                                </div>
-                            </div>
-    
                         </div>
-    
+
                         <div class="about__slider-item">
-    
                             <div class="card__box">
                                 <div class="card__header bg-gray">
                                     <h3 class="rate">4.0</h3>
                                 </div>
-                                <div class="card__price">
+                                <div class="card__price card__price_third">
                                     <h2 class="price">$460.999</h2>
                                 </div>
                                 <div class="card__footer bg-lightgray">
@@ -289,60 +356,14 @@
                                     <p class="value ValueAcceleration">4.5s</p>
                                 </div>
                             </div>
-    
-                            <div class="card__box">
-                                <div class="card__header bg-gray">
-                                    <h3 class="rate">4.0</h3>
-                                </div>
-                                <div class="card__price">
-                                    <h2 class="price">$460.999</h2>
-                                </div>
-                                <div class="card__footer bg-lightgray">
-                                    <h2 class="carModel">GREAT MUSCLE</h2>
-                                    <h3 class="feature transmition">Transmition</h3>
-                                    <p class="value ValueTransmition">Automatic</p>
-                                    <h3 class="feature passenger">Passenger</h3>
-                                    <p class="value ValuePassenger">2 Person</p>
-                                    <h3 class="feature speed">Top Speed</h3>
-                                    <p class="value ValueSpeed">412Km</p>
-                                    <h3 class="feature hp">HP</h3>
-                                    <p class="value ValueHp">560</p>
-                                    <h3 class="feature acceleration">0-1000Km/h</h3>
-                                    <p class="value ValueAcceleration">4.5s</p>
-                                </div>
-                            </div>
-    
-                            <div class="card__box">
-                                <div class="card__header bg-gray">
-                                    <h3 class="rate">4.0</h3>
-                                </div>
-                                <div class="card__price">
-                                    <h2 class="price">$460.999</h2>
-                                </div>
-                                <div class="card__footer bg-lightgray">
-                                    <h2 class="carModel">GREAT MUSCLE</h2>
-                                    <h3 class="feature transmition">Transmition</h3>
-                                    <p class="value ValueTransmition">Automatic</p>
-                                    <h3 class="feature passenger">Passenger</h3>
-                                    <p class="value ValuePassenger">2 Person</p>
-                                    <h3 class="feature speed">Top Speed</h3>
-                                    <p class="value ValueSpeed">412Km</p>
-                                    <h3 class="feature hp">HP</h3>
-                                    <p class="value ValueHp">560</p>
-                                    <h3 class="feature acceleration">0-1000Km/h</h3>
-                                    <p class="value ValueAcceleration">4.5s</p>
-                                </div>
-                            </div>
-    
                         </div>
-    
+
                         <div class="about__slider-item">
-    
                             <div class="card__box">
                                 <div class="card__header bg-gray">
                                     <h3 class="rate">4.0</h3>
                                 </div>
-                                <div class="card__price">
+                                <div class="card__price card__price_third">
                                     <h2 class="price">$460.999</h2>
                                 </div>
                                 <div class="card__footer bg-lightgray">
@@ -359,62 +380,85 @@
                                     <p class="value ValueAcceleration">4.5s</p>
                                 </div>
                             </div>
-    
-                            <div class="card__box">
-                                <div class="card__header bg-gray">
-                                    <h3 class="rate">4.0</h3>
-                                </div>
-                                <div class="card__price">
-                                    <h2 class="price">$460.999</h2>
-                                </div>
-                                <div class="card__footer bg-lightgray">
-                                    <h2 class="carModel">GREAT MUSCLE</h2>
-                                    <h3 class="feature transmition">Transmition</h3>
-                                    <p class="value ValueTransmition">Automatic</p>
-                                    <h3 class="feature passenger">Passenger</h3>
-                                    <p class="value ValuePassenger">2 Person</p>
-                                    <h3 class="feature speed">Top Speed</h3>
-                                    <p class="value ValueSpeed">412Km</p>
-                                    <h3 class="feature hp">HP</h3>
-                                    <p class="value ValueHp">560</p>
-                                    <h3 class="feature acceleration">0-1000Km/h</h3>
-                                    <p class="value ValueAcceleration">4.5s</p>
-                                </div>
-                            </div>
-    
-                            <div class="card__box">
-                                <div class="card__header bg-gray">
-                                    <h3 class="rate">4.0</h3>
-                                </div>
-                                <div class="card__price">
-                                    <h2 class="price">$460.999</h2>
-                                </div>
-                                <div class="card__footer bg-lightgray">
-                                    <h2 class="carModel">GREAT MUSCLE</h2>
-                                    <h3 class="feature transmition">Transmition</h3>
-                                    <p class="value ValueTransmition">Automatic</p>
-                                    <h3 class="feature passenger">Passenger</h3>
-                                    <p class="value ValuePassenger">2 Person</p>
-                                    <h3 class="feature speed">Top Speed</h3>
-                                    <p class="value ValueSpeed">412Km</p>
-                                    <h3 class="feature hp">HP</h3>
-                                    <p class="value ValueHp">560</p>
-                                    <h3 class="feature acceleration">0-1000Km/h</h3>
-                                    <p class="value ValueAcceleration">4.5s</p>
-                                </div>
-                            </div>
-    
                         </div>
-                        
+
+                        <div class="about__slider-item">
+                            <div class="card__box">
+                                <div class="card__header bg-gray">
+                                    <h3 class="rate">4.0</h3>
+                                </div>
+                                <div class="card__price card__price_third">
+                                    <h2 class="price">$460.999</h2>
+                                </div>
+                                <div class="card__footer bg-lightgray">
+                                    <h2 class="carModel">GREAT MUSCLE</h2>
+                                    <h3 class="feature transmition">Transmition</h3>
+                                    <p class="value ValueTransmition">Automatic</p>
+                                    <h3 class="feature passenger">Passenger</h3>
+                                    <p class="value ValuePassenger">2 Person</p>
+                                    <h3 class="feature speed">Top Speed</h3>
+                                    <p class="value ValueSpeed">412Km</p>
+                                    <h3 class="feature hp">HP</h3>
+                                    <p class="value ValueHp">560</p>
+                                    <h3 class="feature acceleration">0-1000Km/h</h3>
+                                    <p class="value ValueAcceleration">4.5s</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- <div class="about__slider-item">
+                            <div class="card__box">
+                                <div class="card__header bg-gray">
+                                    <h3 class="rate">4.0</h3>
+                                </div>
+                                <div class="card__price card__price_third">
+                                    <h2 class="price">$460.999</h2>
+                                </div>
+                                <div class="card__footer bg-lightgray">
+                                    <h2 class="carModel">GREAT MUSCLE</h2>
+                                    <h3 class="feature transmition">Transmition</h3>
+                                    <p class="value ValueTransmition">Automatic</p>
+                                    <h3 class="feature passenger">Passenger</h3>
+                                    <p class="value ValuePassenger">2 Person</p>
+                                    <h3 class="feature speed">Top Speed</h3>
+                                    <p class="value ValueSpeed">412Km</p>
+                                    <h3 class="feature hp">HP</h3>
+                                    <p class="value ValueHp">560</p>
+                                    <h3 class="feature acceleration">0-1000Km/h</h3>
+                                    <p class="value ValueAcceleration">4.5s</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="about__slider-item">
+                            <div class="card__box">
+                                <div class="card__header bg-gray">
+                                    <h3 class="rate">4.0</h3>
+                                </div>
+                                <div class="card__price card__price_third">
+                                    <h2 class="price">$460.999</h2>
+                                </div>
+                                <div class="card__footer bg-lightgray">
+                                    <h2 class="carModel">GREAT MUSCLE</h2>
+                                    <h3 class="feature transmition">Transmition</h3>
+                                    <p class="value ValueTransmition">Automatic</p>
+                                    <h3 class="feature passenger">Passenger</h3>
+                                    <p class="value ValuePassenger">2 Person</p>
+                                    <h3 class="feature speed">Top Speed</h3>
+                                    <p class="value ValueSpeed">412Km</p>
+                                    <h3 class="feature hp">HP</h3>
+                                    <p class="value ValueHp">560</p>
+                                    <h3 class="feature acceleration">0-1000Km/h</h3>
+                                    <p class="value ValueAcceleration">4.5s</p>
+                                </div>
+                            </div>
+                        </div> -->
+
                     </div>
-
-                    
                 </div>
-
-            </div>      <!-- /.about -->
-
+                <!-- /.about__section_5  -->
+            </div> <!-- /.about -->
         </div>
-
     </section>
     <!-- /.ABOUT -->
 
@@ -439,21 +483,21 @@
     </section>
     <!-- /.RESPONSE -->
 
-    <footer class="footer bg-dark">
+    <footer class="footer bg-dark" id="footer">
         <div class="container">
             <div class="footer__inner">
-                <div class="footer__column">
+                <div class="footer__column footer__column_1">
+
                     <div class="footer__text">
-                        <div class="footer__text_logo">
-                            <a href="#" class="logo">
-                                <img src=""><span style="color: #FFD600">KAR</span>BOX
-                            </a>
-                        </div>
+                        <a href="#">
+                            <h1 class="logo"><span style="color: #FFD600">KAR</span>BOX</h1>
+                        </a>
                         <p class="footer__subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                             eiusmod
                             tempor incididunt ut labore et dolore magna aliqua.</p>
                     </div>
-                    <div class="footer__social social">
+
+                    <div class="social">
                         <h2 class="social__text">Follow Us</h2>
                         <div class="social__wrapper">
                             <div class="social__img">
@@ -475,7 +519,7 @@
                     </div>
                 </div>
 
-                <div class="footer__column">
+                <div class="footer__column footer__column_2">
                     <ul class="menu__list">
                         <li class="menu__item_title"><a href="" class="menu__link">Quick Links</a></li>
                         <li class="menu__item"><a href="" class="menu__link">Home</a></li>
@@ -486,7 +530,7 @@
                     </ul>
                 </div>
 
-                <div class="footer__column">
+                <div class="footer__column footer__column_3">
                     <ul class="menu__list">
                         <li class="menu__item_title"><a href="" class="menu__link">Support</a></li>
                         <li class="menu__item"><a href="" class="menu__link">Affiliates</a></li>
@@ -496,8 +540,7 @@
                         <li class="menu__item"><a href="" class="menu__link">Legal Disclaimer</a></li>
                     </ul>
                 </div>
-
-                <div class="footer__column">
+                <div class="footer__column footer__column_4">
                     <div class="footer-input">
                         <div class="footer-input__text">
                             <h2 class="footer-input__title">Subscribe</h2>
@@ -506,11 +549,22 @@
                                 eiusmod tempor incididunt ut</p>
                         </div>
                         <div class="footer-input__buttons">
-                            <input class="" name="email" placeholder="Enter your email here" type="email">
+                            <input class="" name="email" style="text-transform: lowercase"
+                                placeholder="Enter your email here" type="email"
+                                pattern="[a-zA-Z0-9.!#$%&amp;’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)+"
+                                required>
                             <button class="btn btn--input">Send</button>
                         </div>
                     </div>
                 </div>
+                <select class="footer__column_media">
+                    <option>Support</option>
+                    <option>Affiliates</option>
+                    <option>Sitemap</option>
+                    <option>Cancelation Policy</option>
+                    <option>Privacy Policy</option>
+                    <option>Legal Disclaimer</option>
+                </select>
             </div>
         </div>
 

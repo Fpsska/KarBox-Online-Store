@@ -17,7 +17,6 @@
     }
     &__slider {
         overflow: hidden;
-        //position: relative;
         .slick-dots {
             position: absolute;
             top: 45%;
@@ -250,8 +249,6 @@
     padding: 15em 0 10em 0;
     &__img {
         background-image: url(../img/about-v1.2.jpg);
-        // width: 825px;
-        // height: 550px;
     }
     .btn--yellow {
         margin: auto 0 0 0;
@@ -269,19 +266,23 @@
     background-image: url(../img/about-v1.3.jpg);
 }
 
-.about__section_1 {
-    width: 875px;
-}
+// .about__section_1 {
+//     width: 50%;
+// }
 
 .about__section_2 {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    margin-left: 5em;
+    max-width: 600px;
+}
+
+.about__section_2_mobile {
+    display: none;
 }
 
 .about__section_3 {
-    width: 60%;
+    max-width: 60%;
 }
 
 .about__section_5 {
@@ -292,7 +293,8 @@
 .about__contacts {
     display: flex;
     justify-content: space-between;
-    max-width: 590px;
+    // max-width: 590px;
+    width: 100%;
 }
 
 //*************./ABOUT*************//
@@ -388,7 +390,6 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    // width: 100%;
 }
 
 .sort__option {
@@ -521,52 +522,53 @@
     display: flex;
     flex-direction: column;
     margin-top: 5em;
-    .gallary__inner {
+    &__inner {
         display: flex;
         flex-direction: column;
-        width: 530px;
+        width: 100%;
         margin-top: 2em;
     }
-    .gallary__title {
+    &__title {
         font-size: 28px;
         @extend %rus-regular;
     }
-    .gallary__inner_top {
+    &__inner_top {
         display: flex;
         justify-content: space-between;
     }
-    .gallary__inner_btm {
+    &__inner_btm {
         display: flex;
         justify-content: space-between;
-        margin-top: 2em;
+        margin-top: 1em;
     }
-    .gallary__item {
-        width: 245px;
-        height: 245px;
-        background-color: $gray;
-    }
-    .gallary__img_1 {
+    // &__item {  delete?
+    //     width: 245px;
+    //     height: 245px;
+    //     background-color: $gray;
+    // }
+    &__img_1 {
         background-image: url("/img/headerSlider-3.jpg");
+        margin-right: 1em;
     }
-    .gallary__img_2 {
+    &__img_2 {
         background-image: url("/img/headerSlider-6.jpg");
     }
-    .gallary__img_3 {
+    &__img_3 {
         background-image: url("/img/headerSlider-5.jpg");
     }
-    .gallary__img_4 {
+    &__img_4 {
         background-image: url("/img/headerSlider-4.jpg");
     }
 }
 
 .rating {
-    padding: 8em 4em 4em 4em;
+    padding: 10em 4em;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: start;
-    width: 530px;
-    height: 410px;
+    // width: 530px;
+    // height: 410px;
     background-color: #464646;
     color: $first;
     position: relative;
