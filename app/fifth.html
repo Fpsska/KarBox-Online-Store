@@ -18,9 +18,9 @@
                 </a>
                 <nav class="menu header__menu" id="header__menu">
                     <ul class="menu__list">
-                        <li class="menu__item" data-menuanchor="home"><a href="#home"
+                        <li class="menu__item active" data-menuanchor="home"><a href="#home"
                                 class="menu__link">Home</a></li>
-                        <li class="menu__item active" data-menuanchor="about"><a href="#about" class="menu__link">About</a>
+                        <li class="menu__item" data-menuanchor="about"><a href="#about" class="menu__link">About</a>
                         </li>
                         <li class="menu__item" data-menuanchor=""><a href="#" class="menu__link">Services</a></li>
                         <li class="menu__item" data-menuanchor="products"><a href="#products"
@@ -39,7 +39,7 @@
                 <nav class="menu header__menu" id="header__menu">
                     <ul class="menu__list">
                         <li class="menu__item active" data-menuanchor="home"><a href="#home"
-                                class="menu__link">About</a>
+                                class="menu__link">Home</a>
                         </li>
                     </ul>
                 </nav>
@@ -48,11 +48,12 @@
         </div>
     </header>
     <!-- /.HEADER -->
-    <section class="contacs bg-dark">
+    <section class="contacts bg-dark">
+
         <div class="container_description">
 
-            <div class="contacs__header">
-                <div class="text">
+            <div class="contacts__header">
+                <div class="text text_fourth">
                     <h3 class="text__subtitle">Contact Us</h3>
                     <p class="text__descrpt">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
                         tempor
@@ -60,39 +61,47 @@
                         ullamco laboris nisi ut aliquip ex ea.</p>
                 </div>
 
-                <div class="form">
-
-                    <div class="form__section_1">
-                        <h2 class="form__text form__name_title">Full Name</h2>
-                        <h3 class="form__text form__email_title">Email</h3>
-                        <input class="form__name" name="name" placeholder="" type="text">
-                        <input class="form__email" name="email" placeholder="" type="email">
-                    </div>
-
-                    <div class="form__section_2">
-                        <h2 class="form__text form__subject_title">Subject</h2>
-                        <input class="form__subject" name="text" placeholder="" type="text">
-                    </div>
-
-                    <div class="form__section_3">
-                        <h2 class="form__text form__message_title">Message</h2>
-                        <input class="form__message" name="text" placeholder="" type="text">
-                    </div>
-
-                    <div class="form__section_4">
-                        <div class="checkBox">
-                            <input id="ch1" type="checkBox" class="checkBox__input">
-                            <label for="ch1" class="checkBox__label">Accept <span style="color: #ffd600">terms &
-                                    conditions</span></label>
-                        </div>
-                        <button class="btn btn--yellow">SEND MESSAGE</button>
-                    </div>
-
+                <div class="contacts__background">
+                    <img class="contacts__img " src="../img/mapBackground.svg" alt="map">
                 </div>
+
+                <div class="contacts__form">
+                    <div class="form">
+
+                        <div class="form__section_1">
+                            <h2 class="form__text form__name_title">Full Name</h2>
+                            <h3 class="form__text form__email_title">Email</h3>
+                            <input class="form__name" name="name" placeholder="" type="text">
+                            <input class="form__email" name="email" placeholder="" type="email">
+                        </div>
+
+                        <div class="form__section_2">
+                            <h2 class="form__text form__subject_title">Subject</h2>
+                            <input class="form__subject" name="text" placeholder="" type="text">
+                        </div>
+
+                        <div class="form__section_3">
+                            <h2 class="form__text form__message_title">Message</h2>
+                            <input class="form__message" name="text" placeholder="" type="text">
+                        </div>
+
+                        <div class="form__section_4">
+                            <div class="checkBox">
+                                <input id="ch1" type="checkBox" class="checkBox__input">
+                                <label for="ch1" class="checkBox__label">Accept <span style="color: #ffd600">terms &
+                                        conditions</span></label>
+                            </div>
+                            <div class="form__btn">
+                                <button class="btn btn--yellow">SEND MESSAGE</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
 
-        <div class="contacs__footer bg-light">
+        <div class="contacts__footer bg-light">
             <div class="container_description">
 
 

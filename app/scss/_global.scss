@@ -115,6 +115,10 @@ $light-gray: #f9f9f9;
     color: #fff;
 }
 
+// .text_fifth {
+//     padding: 8em 0;
+// }
+
 .container {
     max-width: 1600px;
     margin: 0 auto;
@@ -250,7 +254,6 @@ body {
     background-color: $dark;
     text-transform: uppercase;
     align-items: center;
-    // height: 140px;
     padding: 2em 0;
     width: 100%;
     display: flex;
@@ -306,15 +309,18 @@ body {
     flex-direction: column;
     &__title {
         @extend %rb-medium;
+        z-index: 1;
         font-size: 20px;
         margin-bottom: 16px;
     }
     &__subtitle {
         @extend %rus-regular;
+        z-index: 1;
         font-size: 60px;
         margin-bottom: 42px;
     }
     &__descrpt {
+        z-index: 1;
         max-width: 790px;
         font-size: 18px;
         margin: 0 auto;
@@ -550,7 +556,7 @@ body {
     &__title {
         font-size: 48px;
         @extend %rus-regular;
-        width: 35%;
+        max-width: 35%;
     }
     &__subtitle {
         font-size: 18px;
@@ -563,7 +569,7 @@ body {
         justify-content: space-between;
     }
     &__item {
-        width: 25%;
+        max-width: 25%;
         padding: 4em 1.5em 4em 2.5em;
         display: flex;
         flex-direction: column;
@@ -573,11 +579,9 @@ body {
         display: flex;
         justify-content: space-between;
         flex-direction: row;
-        flex-wrap: wrap;
     }
     &__item {
         width: 22%;
-        height: 27em;
         background-color: $yellow;
     }
     &__city {
@@ -625,22 +629,6 @@ body {
         display: none;
     }
 }
-
-// .position__stage_first {
-//     &::before {
-//         content: url(../img/slash.svg);
-//         position: absolute;
-//         top: 0;
-//         left: 150%;
-//     }
-//     &::after {
-//         content: url(../img/slash.svg);
-//         position: absolute;
-//         top: 0;
-//         left: 540%;
-//     }
-// }
-
 .position__stage.active {
     text-transform: uppercase;
     color: #575757;
@@ -1295,12 +1283,15 @@ body {
     }
 }
 
-.contacs {
-    &::before {
-        content: url(../img/mapBackground.svg);
+.contacts {
+    &__background {
+        z-index: 0;
         position: absolute;
-        top: 30%;
-        left: 10%;
+        top: 13%;
+    }
+    &__img {
+        max-width: 100%;
+        z-index: 0;
     }
     &::after {
         content: url(../img/circleElement.svg);
@@ -1310,25 +1301,28 @@ body {
     }
     &__header {
         position: relative;
-        padding-bottom: 7em;
+        padding-bottom: 10em;
     }
     &__footer {
         padding: 12em 0 10em 0;
     }
     .text {
+        z-index: 1;
         padding: 5em;
     }
 }
 
 .form {
+    max-width: 835px;
+    // max-width: 700px;
     z-index: 1;
     position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 5em 1.3em 4em 1.3em;
+    // padding: 5em 1.3em 4em 1.3em;
+    padding: 5em 0 4em 0;
     margin: 0 auto;
-    width: 700px;
     color: $dark;
     background-color: $first;
     &__text {
@@ -1338,22 +1332,22 @@ body {
     }
     &__name_title {
         top: 6%;
-        left: 10%;
+        left: 7.5%;
     }
     &__email_title {
-        top: 4%;
+        top: 6%;
         left: 54%;
     }
     &__subject_title {
         top: 22%;
-        left: 10%;
+        left: 7.5%;
     }
     &__message_title {
-        top: 38%;
-        left: 10%;
+        top: 37%;
+        left: 7.5%;
     }
     &__section_1 {
-        //width: 85%;
+        width: 85%;
         display: flex;
         justify-content: space-between;
         .form__name {
@@ -1364,15 +1358,15 @@ body {
         }
     }
     &__section_2 {
-        //width: 85%;
+        width: 85%;
         margin: 5em 0;
         .form__subject {
             width: 100%;
         }
     }
     &__section_3 {
-        //width: 85%;
-        margin-bottom: 5em;
+        width: 85%;
+        margin-bottom: 4em;
         .form__message {
             width: 100%;
             height: 15em;
@@ -1380,7 +1374,9 @@ body {
     }
     &__section_4 {
         color: $dark;
-        max-width: 45%;
+        width: 85%;
+        // width: 100%;
+        text-align: center;
         .btn--yellow {
             width: 100%;
             text-align: center;
@@ -1421,7 +1417,7 @@ body {
                     content: "";
                     position: absolute;
                     top: 1px;
-                    left: 3px;
+                    left: 2.5px;
                     width: 6px;
                     height: 10px;
                     border: 2px solid $dark;
