@@ -18,8 +18,8 @@
                 </a>
                 <nav class="menu header__menu" id="header__menu">
                     <ul class="menu__list">
-                        <li class="menu__item active" data-menuanchor="home"><a href="#home"
-                                class="menu__link">Home</a></li>
+                        <li class="menu__item active" data-menuanchor="home"><a href="#home" class="menu__link">Home</a>
+                        </li>
                         <li class="menu__item" data-menuanchor="about"><a href="#about" class="menu__link">About</a>
                         </li>
                         <li class="menu__item" data-menuanchor=""><a href="#" class="menu__link">Services</a></li>
@@ -31,15 +31,13 @@
                 </nav>
                 <button class="btn btn--black" data-menuanchor="footer">Contact us</button>
             </div>
-
             <div class="bar-mobile bar-mobile_home">
                 <a href="#">
                     <h1 class="logo"><span style="color: #FFD600">KAR</span>BOX</h1>
                 </a>
                 <nav class="menu header__menu" id="header__menu">
                     <ul class="menu__list">
-                        <li class="menu__item active" data-menuanchor="home"><a href="#home"
-                                class="menu__link">Home</a>
+                        <li class="menu__item active" data-menuanchor="home"><a href="#home" class="menu__link">Home</a>
                         </li>
                     </ul>
                 </nav>
@@ -48,10 +46,8 @@
         </div>
     </header>
     <!-- /.HEADER -->
-    <section class="contacts bg-dark">
-
+    <main class="contacts bg-dark">
         <div class="container_description">
-
             <div class="contacts__header">
                 <div class="text text_fourth">
                     <h3 class="text__subtitle">Contact Us</h3>
@@ -60,31 +56,32 @@
                         incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
                         ullamco laboris nisi ut aliquip ex ea.</p>
                 </div>
-
                 <div class="contacts__background">
                     <img class="contacts__img " src="../img/mapBackground.svg" alt="map">
                 </div>
-
                 <div class="contacts__form">
                     <div class="form">
-
                         <div class="form__section_1">
                             <h2 class="form__text form__name_title">Full Name</h2>
                             <h3 class="form__text form__email_title">Email</h3>
-                            <input class="form__name" name="name" placeholder="" type="text">
-                            <input class="form__email" name="email" placeholder="" type="email">
+                            <input class="form__name" name="name" placeholder="Petrov Andrey Pavlovich" type="text"
+                                pattern="[a-zA-z]+\s[a-zA-z]+|[a-zA-z]+\s[a-zA-z]+\s[a-zA-Z]+" required>
+                            <input class="form__email" name="email" placeholder="@mail.ru" type="email"
+                                pattern="[a-zA-Z0-9.!#$%&amp;’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)+"
+                                required>
                         </div>
-
+                        <!-- /.form__section_1 -->
                         <div class="form__section_2">
                             <h2 class="form__text form__subject_title">Subject</h2>
-                            <input class="form__subject" name="text" placeholder="" type="text">
+                            <input class="form__subject" name="text" placeholder="Some topic" type="text"
+                                pattern="[a-zA-Z]+" required>
                         </div>
-
+                        <!-- /.form__section_2 -->
                         <div class="form__section_3">
                             <h2 class="form__text form__message_title">Message</h2>
-                            <input class="form__message" name="text" placeholder="" type="text">
+                            <input class="form__message" name="text" placeholder="Write your message..." type="text">
                         </div>
-
+                        <!-- /.form__section_3 -->
                         <div class="form__section_4">
                             <div class="checkBox">
                                 <input id="ch1" type="checkBox" class="checkBox__input">
@@ -95,27 +92,21 @@
                                 <button class="btn btn--yellow">SEND MESSAGE</button>
                             </div>
                         </div>
+                        <!-- /.form__section_4 -->
                     </div>
                 </div>
-
             </div>
         </div>
-
         <div class="contacts__footer bg-light">
             <div class="container_description">
-
-
                 <div class="location">
-
                     <div class="location__text">
                         <h2 class="location__title">Our Dealer Locations</h2>
                         <p class="location__subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
                             nostrud exercitation ullamco laboris nisi ut aliquip ex ea.</p>
                     </div>
-
                     <div class="location__wrapper">
-
                         <div class="location__item">
                             <h2 class="location__city">London,</h2>
                             <h3 class="location__country">United Kingdom</h3>
@@ -127,7 +118,6 @@
                                 <a href="tel:224000221133">224 000 22 11 33</a>
                             </div>
                         </div>
-
                         <div class="location__item">
                             <h2 class="location__city">Sydney,</h2>
                             <h3 class="location__country">Australia</h3>
@@ -139,7 +129,6 @@
                                 <a href="tel:224000221133">224 000 22 11 33</a>
                             </div>
                         </div>
-
                         <div class="location__item">
                             <h2 class="location__city">Dhaka,</h2>
                             <h3 class="location__country">BANGLADESH</h3>
@@ -152,7 +141,6 @@
                                 <a href="tel:224000221133">224 000 22 11 33</a>
                             </div>
                         </div>
-
                         <div class="location__item">
                             <h2 class="location__city">Jakarta,</h2>
                             <h3 class="location__country">INDONESIA</h3>
@@ -167,13 +155,10 @@
                         </div>
                     </div>
                 </div>
-
             </div>
-
         </div>
-
-    </section>
-
+    </main>
+    <!-- /MAIN -->
     <footer class="footer bg-dark" id="footer">
         <div class="container">
             <div class="footer__inner">
@@ -264,10 +249,10 @@
         </div>
 
     </footer>
-
     <!-- /.FOOTER -->
 
-    <!-- JS -->
+    
+    <!-- SCRIPTS -->
     <script src="js/main.min.js"></script>
 </body>
 

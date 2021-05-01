@@ -23,9 +23,6 @@
     .footer__inner {
         padding: 100px 1em 100px 1em;
     }
-    .card__box {
-        padding: 0 0.5em;
-    }
     // /.MAIN PAGE
     .about__img_team {
         margin-right: 1em !important;
@@ -81,6 +78,9 @@
     .position__stage {
         font-size: 18px;
     }
+    .card__box {
+        padding: 0 0.5em;
+    }
     // /.THIRD PAGE
     .location__title {
         font-size: 44px;
@@ -89,9 +89,6 @@
 }
 
 @media (max-width: 1550px) {
-    .card__box {
-        margin-top: 5em !important;
-    }
     .slider-arw__testmn_right {
         left: 102% !important;
     }
@@ -121,6 +118,9 @@
     // /.MAIN PAGE
     .card__slider-item {
         justify-content: space-evenly !important;
+    }
+    .card__box_last {
+        margin-top: 5em;
     }
     .selection {
         left: 4.5%;
@@ -247,6 +247,11 @@
     // /.SECOND PAGE
     .card__price_third {
         left: 47%;
+    }
+    .card__slider-item {
+        .card__price {
+            left: 45%;
+        }
     }
     // /.THIRD PAGE
     .location__title {
@@ -660,7 +665,7 @@
         padding: 6em 0 !important;
     }
     .btn--black {
-        font-size: 14px;
+        font-size: 13px;
     }
     .header__menu {
         .menu__link {
@@ -722,13 +727,14 @@
     .relult_text {
         font-size: 24px;
     }
-    .card__box {
-        margin-top: 3em !important;
-    }
     .selection__column {
         &::after {
             left: 65% !important;
+            top: 57% !important;
         }
+    }
+    .card__box {
+        padding: 0 0.25em;
     }
     // /.SECOND PAGE
     .about__info {
@@ -1171,6 +1177,12 @@
         padding: 1.4em 1.1em !important;
     }
     // /.MAIN PAGE
+    .card__slider-item {
+        .card__price {
+            left: 33%;
+        }
+    }
+    // /.SECOND PAGE
     .skills_black {
         flex-direction: column;
         justify-content: flex-start;
@@ -1215,6 +1227,7 @@
     }
     .products__sort_mobile {
         display: block;
+        margin-bottom: 3em;
     }
     .sort {
         display: flex;
@@ -1358,6 +1371,16 @@
     .card__price_third {
         left: 50%;
     }
+    .card__slider-item {
+        justify-content: center !important;
+    }
+    .card__box {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .card__slider-item .card__price {
+        left: 47%;
+    }
     // /.THIRD PAGE
     .checkBox__label {
         margin-left: 0.5em !important;
@@ -1443,6 +1466,10 @@
         left: 90% !important;
     }
     // /.MAIN PAGE
+    .text_second {
+        padding: 5em 0 10em 0 !important;
+    }
+    // /.SECOND PAGE
     .position__stage {
         font-size: 14px;
     }
@@ -1479,6 +1506,14 @@
     }
     .description__slider {
         height: 250px !important;
+    }
+    .bar-mobile {
+        .logo {
+            margin-left: 0.75em !important;
+        }
+    }
+    .bar-mobile .btn--black {
+        margin-right: 0.75em;
     }
     .advantages {
         .text {
@@ -1569,7 +1604,7 @@
     }
     .selection__column {
         &::after {
-            top: 62% !important;
+            top: 58% !important;
             left: 105% !important;
         }
     }
@@ -1904,7 +1939,7 @@
         &::after {
             content: url(../img/selection-arrw_MB.svg) !important;
             left: 105% !important;
-            top: 60% !important;
+            top: 53% !important;
         }
     }
     .selection__valueBrad {
@@ -1922,6 +1957,12 @@
     .btn--yellow {
         padding: 0.75em !important;
         font-size: 14px !important;
+    }
+    .products_second {
+        margin: 10em 0 10em 0 !important;
+    }
+    .card__slider-item .card__price {
+        left: 55%;
     }
     // /.SECOND PAGE
     .tabs__position-stage {
@@ -2008,7 +2049,15 @@
     .testimonials {
         padding: 1em 0 0 0 !important;
     }
+    .selection__column {
+        &::after {
+            top: 54% !important;
+        }
+    }
     // /.FOURTH PAGE
+    .location__item {
+        padding: 5em 1.5em 5em 2.5em;
+    }
 }
 
 @media (max-width: 320px) {
@@ -2063,6 +2112,15 @@
     .response-wrapper {
         margin-top: 2em;
     }
+    .selection__column {
+        &::after {
+            top: 55% !important;
+        }
+    }
+    .selection {
+        width: 100%;
+        left: 0 !important;
+    }
     // /.SECOND PAGE
     .card__price_singly {
         padding: 0 1em;
@@ -2102,9 +2160,6 @@
         left: 50%;
     }
     // /.THIRD PAGE
-    .location__item {
-        padding: 5em 1.5em 5em 2em;
-    }
     .checkBox__label {
         font-size: 16px !important;
     }
