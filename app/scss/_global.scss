@@ -58,7 +58,7 @@ button {
 input {
     padding: 0 1em;
     outline: none;
-    transition: .2s linear;
+    transition: 0.2s linear;
 }
 input:focus {
     border: 1px solid #ffd600 !important;
@@ -73,7 +73,8 @@ input:invalid {
     color: #ff0000 !important;
 }
 input:valid {
-    color: rgb(5, 255, 5) !important;
+    // color: rgb(5, 255, 5) !important;
+    color: #000;
 }
 // input[required] {
 //     background-color: red !important;
@@ -260,6 +261,26 @@ body {
     justify-content: space-between;
 }
 
+.bar-sticky {
+    z-index: 4;
+    padding: .5em 1em;
+    position: fixed;
+    top: 0;
+    left: 0;
+    border-radius: 0 0 15px 15px;
+    animation: smoothScroll 1s forwards;
+}
+@keyframes smoothScroll {
+	0% {
+		transform: translateY(-30px);
+        opacity: 1;
+	}
+	100% {
+		transform: translateY(0px);
+        opacity: .95;
+	}
+}
+
 .bar_light {
     background-color: $first;
     .menu__link {
@@ -389,10 +410,7 @@ body {
         opacity: 0.6;
         padding: 5px 2px;
     }
-    &__btn {
-        margin: auto 0 0 0;
-    }
-    &__btn_mobile {
+    .btn--yellow_mobile {
         display: none;
     }
 }
@@ -712,7 +730,7 @@ body {
         @extend %monts-bold;
         position: relative;
         width: 12em;
-        padding: 1.5em 2.5em;
+        // padding: 1.5em 2.5em;
         background-color: $dark;
         color: $first;
         &::after {
@@ -755,7 +773,7 @@ body {
     background-color: $first;
     color: $dark;
     font-size: 16px;
-    padding: 1.5em 1.1em;
+    padding: 1.35em 1.1em;
     font-style: normal;
     font-weight: 700;
     a {
@@ -997,10 +1015,8 @@ body {
         display: none;
     }
     .card__slider-item {
-        // justify-content: space-between;
         display: flex !important;
         flex-direction: column !important;
-        // flex-direction: row !important;
     }
 }
 
@@ -1269,7 +1285,7 @@ body {
 
 .contacts {
     &__background {
-        z-index: 0;
+        z-index: -2;
         position: absolute;
         top: 13%;
     }
@@ -1277,14 +1293,9 @@ body {
         max-width: 100%;
         z-index: 0;
     }
-    &::after {
-        content: url(../img/circleElement.svg);
-        position: absolute;
-        top: 72%;
-        left: 28%;
-    }
     &__header {
         position: relative;
+        z-index: 3;
         padding-bottom: 10em;
     }
     &__footer {
@@ -1298,7 +1309,6 @@ body {
 
 .form {
     max-width: 835px;
-    z-index: 1;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -1307,6 +1317,13 @@ body {
     margin: 0 auto;
     color: $dark;
     background-color: $first;
+    &::after {
+        content: url(../img/circleElement.svg);
+        position: absolute;
+        top: 35%;
+        left: -9%;
+        z-index: -2;
+    }
     &__text {
         font-size: 16px;
         position: absolute;
@@ -1419,4 +1436,8 @@ body {
             @extend %rb-medium;
         }
     }
+}
+
+.slick-slide {
+    height: auto !important; //FIX SLIDER HEIGHT BUG
 }

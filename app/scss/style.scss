@@ -101,7 +101,7 @@
                 &::after {
                     content: "";
                     top: 40%;
-                    right: 12%;
+                    right: 6%;
                     position: absolute;
                     width: 0;
                     height: 0;
@@ -196,7 +196,6 @@
 
 .selection {
     position: absolute;
-    // max-width: 100%;
     top: 85%;
     left: 10%;
     width: 100%;
@@ -342,10 +341,7 @@
         margin-top: 1em;
     }
     &__cards {
-        padding: 5em 0;
-    }
-    &__btn {
-        margin: auto;
+        padding: 5em 0 0 0;
     }
     &__sort {
         margin-bottom: 4em;
@@ -386,6 +382,9 @@
                 left: 30%;
             }
         }
+    }
+    .btn--products {
+        margin: auto;
     }
 }
 .sort {

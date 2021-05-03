@@ -1,50 +1,48 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html> -->
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="stylesheet" href="../css/style.min.css">
     <title>THIRD PAGE</title>
 </head>
 
 <body>
-    <header class="header bg-light">
+    <header class="header bg-light" id="header">
         <div class="container_big">
 
-            <div class="bar bar_light">
-                <a href="#">
+            <div class="bar bar_light" id="bar">
+                <a href="../index.html">
                     <h1 class="logo"><span style="color: #FFD600">KAR</span><span style="color: #000000">BOX</span></h1>
                 </a>
                 <nav class="menu header__menu" id="header__menu">
                     <ul class="menu__list">
-                        <li class="menu__item active" data-menuanchor="home"><a href="#home" class="menu__link">Home</a>
+                        <li class="menu__item"><a href="../index.html" class="menu__link">Home</a>
                         </li>
-                        <li class="menu__item" data-menuanchor="about"><a href="#about" class="menu__link">About</a>
+                        <li class="menu__item active"><a href="#" class="menu__link">About</a>
                         </li>
-                        <li class="menu__item" data-menuanchor=""><a href="#" class="menu__link">Services</a></li>
-                        <li class="menu__item" data-menuanchor="products"><a href="#products"
-                                class="menu__link">Collections</a></li>
-                        <li class="menu__item" data-menuanchor="testimonials"><a href="#testimonials"
-                                class="menu__link">Blog</a></li>
+                        <li class="menu__item"><a href="../templates/fourth.html" class="menu__link">Services</a></li>
+                        <li class="menu__item"><a href="/templates/second.html" class="menu__link">Collections</a></li>
+                        <li class="menu__item"><a href="#testimonials" class="menu__link">Blog</a></li>
                     </ul>
                 </nav>
-                <button class="btn btn--bar" data-menuanchor="footer">Contact us</button>
+                <button class="btn btn--bar" data-scroll="#footer">Contact us</button>
             </div>
 
             <div class="bar-mobile bar_light">
-                <a href="#">
+                <a href="../index.html">
                     <h1 class="logo"><span style="color: #FFD600">KAR</span><span style="color: #000000">BOX</span></h1>
                 </a>
                 <nav class="menu header__menu" id="header__menu">
                     <ul class="menu__list">
-                        <li class="menu__item active" data-menuanchor="home"><a href="#home"
+                        <li class="menu__item active"><a href="#" data-scroll="#header"
                                 class="menu__link">About</a>
                         </li>
                     </ul>
                 </nav>
-                <button class="btn btn--bar" data-menuanchor="footer">Contact us</button>
+                <button class="btn btn--bar" data-scroll="#footer">Contact us</button>
             </div>
 
         </div>
@@ -58,25 +56,25 @@
                 <div class="about__header">
                     <div class="social__wrapper">
                         <div class="social__img">
-                            <img class="social__img_icon" src="/img/linkedIn.svg" alt="">
+                            <img class="social__img_icon" src="../img/linkedIn.svg" alt="">
                         </div>
                         <div class="social__img">
-                            <img class="social__img_icon" src="/img/twitter.svg" alt="">
+                            <img class="social__img_icon" src="../img/twitter.svg" alt="">
                         </div>
                         <div class="social__img">
-                            <img class="social__img_icon" src="/img/facebook.svg" alt="">
+                            <img class="social__img_icon" src="../img/facebook.svg" alt="">
                         </div>
                     </div>
                     <div class="position">
                         <div class="position__item">
                             <h2 class="position__stage position__stage_first">Home</h2>
-                            <img class="position__img" src="./img/slash.svg" alt=" symbol">
-                            <img class="position__img-mobile" src="./img/slash_MB.svg" alt=" symbol">
+                            <img class="position__img" src="../img/slash.svg" alt=" symbol">
+                            <img class="position__img-mobile" src="../img/slash_MB.svg" alt=" symbol">
                         </div>
                         <div class="position__item">
                             <h2 class="position__stage">Car Collections</h2>
-                            <img class="position__img" src="./img/slash.svg" alt=" symbol">
-                            <img class="position__img-mobile" src="./img/slash_MB.svg" alt=" symbol">
+                            <img class="position__img" src="../img/slash.svg" alt=" symbol">
+                            <img class="position__img-mobile" src="../img/slash_MB.svg" alt=" symbol">
                         </div>
                         <div class="position__item">
                             <h2 class="position__stage position__stage_last active">SMART GT AA-211</h2>
@@ -383,7 +381,7 @@
                             labore et dolore magna aliqua.</p>
                     </div>
                     <div class="response-block__contacts">
-                        <button class="btn response--btn">Contacs Us</button>
+                        <a href="/templates/fifth.html" class="btn response--btn">Contacs Us</a>
                         <div class="response-block__phone">
                             <img src="/img/phoneicon.svg" alt="">
                             <a href="tel:224000221133">224 000 22 11 33</a>
@@ -400,7 +398,7 @@
             <div class="footer__inner">
                 <div class="footer__column footer__column_1">
                     <div class="footer__text">
-                        <a href="#">
+                        <a href="#" data-scroll="#header">
                             <h1 class="logo"><span style="color: #FFD600">KAR</span>BOX</h1>
                         </a>
                         <p class="footer__subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -433,11 +431,12 @@
                 <div class="footer__column footer__column_2">
                     <ul class="menu__list">
                         <li class="menu__item_title"><a href="" class="menu__link">Quick Links</a></li>
-                        <li class="menu__item"><a href="" class="menu__link">Home</a></li>
-                        <li class="menu__item"><a href="" class="menu__link">About</a></li>
-                        <li class="menu__item"><a href="" class="menu__link">Services</a></li>
-                        <li class="menu__item"><a href="" class="menu__link">Collections</a></li>
-                        <li class="menu__item"><a href="" class="menu__link">Blog</a></li>
+                        <li class="menu__item"><a href="" class="menu__link" data-scroll="#header">Home</a></li>
+                        <li class="menu__item"><a href="" class="menu__link" data-scroll="#about">About</a></li>
+                        <li class="menu__item"><a href="" class="menu__link" data-scroll="#services">Services</a></li>
+                        <li class="menu__item"><a href="" class="menu__link" data-scroll="#products">Collections</a>
+                        </li>
+                        <li class="menu__item"><a href="" class="menu__link" data-scroll="#testimonials">Blog</a></li>
                     </ul>
                 </div>
 
@@ -486,7 +485,7 @@
     <!-- /.FOOTER -->
 
     <!-- SCRIPTS -->
-    <script src="js/main.min.js"></script>
+    <script src="../js/main.min.js"></script>
 </body>
 
 </html>

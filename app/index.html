@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html> -->
 <html lang="en">
 
 <head>
@@ -10,41 +10,42 @@
 
 <body>
 
-    <header class="header bg-dark">
-        <div class="header__inner" id="home">
+    <header class="header bg-dark" id="header">
+        <div class="header__inner">
             <div class="container_big">
-                <div class="bar">
-                    <a href="#">
+                <div class="bar" id="bar">
+                    <a href="#" data-scroll="#header">
                         <h1 class="logo"><span style="color: #FFD600">KAR</span>BOX</h1>
                     </a>
                     <nav class="menu header__menu" id="header__menu">
                         <ul class="menu__list">
-                            <li class="menu__item active" data-menuanchor="home"><a href="#home"
-                                    class="menu__link">Home</a></li>
-                            <li class="menu__item" data-menuanchor="about"><a href="#about" class="menu__link">About</a>
+                            <li class="menu__item active"><a href="#" class="menu__link" data-scroll="#header">Home</a>
                             </li>
-                            <li class="menu__item" data-menuanchor=""><a href="#" class="menu__link">Services</a></li>
-                            <li class="menu__item" data-menuanchor="products"><a href="#products"
-                                    class="menu__link">Collections</a></li>
-                            <li class="menu__item" data-menuanchor="testimonials"><a href="#testimonials"
-                                    class="menu__link">Blog</a></li>
+                            <li class="menu__item"><a href="#" class="menu__link" data-scroll="#about">About</a>
+                            </li>
+                            <li class="menu__item"><a href="#" class="menu__link" data-scroll="#services">Services</a>
+                            </li>
+                            <li class="menu__item"><a href="#" class="menu__link"
+                                    data-scroll="#products">Collections</a>
+                            </li>
+                            <li class="menu__item"><a href="#" class="menu__link" data-scroll="#testimonials">Blog</a>
+                            </li>
                         </ul>
                     </nav>
-                    <button class="btn btn--black" data-menuanchor="footer">Contact us</button>
+                    <button class="btn btn--black" data-scroll="#footer">Contact us</button>
                 </div>
 
                 <div class="bar-mobile bar-mobile_home">
-                    <a href="#">
+                    <a href="#" data-scroll="#header">
                         <h1 class="logo"><span style="color: #FFD600">KAR</span>BOX</h1>
                     </a>
                     <nav class="menu header__menu" id="header__menu">
                         <ul class="menu__list">
-                            <li class="menu__item active" data-menuanchor="home"><a href="#home"
-                                    class="menu__link">Home</a>
+                            <li class="menu__item active"><a href="" class="menu__link">Home</a>
                             </li>
                         </ul>
                     </nav>
-                    <button class="btn btn--black" data-menuanchor="footer">Contact us</button>
+                    <button class="btn btn--black" data-scroll="#footer">Contact us</button>
                 </div>
             </div>
 
@@ -65,7 +66,7 @@
                                 <div class="information__price">
                                     <h2 class="information__price_title">Starting from</h2>
                                     <h3 class="information__price_subtitle">$599.999</h3>
-                                    <button class="btn btn--white">Discover More</button>
+                                    <a href="templates/third.html" class="btn btn--white">Discover More</a>
                                 </div>
                             </div>
                             <picture class="information__img">
@@ -91,7 +92,7 @@
                                 <div class="information__price">
                                     <h2 class="information__price_title">Starting from</h2>
                                     <h3 class="information__price_subtitle">$599.999</h3>
-                                    <button class="btn btn--white">Discover More</button>
+                                    <a href="templates/third.html" class="btn btn--white">Discover More</a>
                                 </div>
                             </div>
                             <picture class="information__img">
@@ -116,7 +117,7 @@
                                 <div class="information__price">
                                     <h2 class="information__price_title">Starting from</h2>
                                     <h3 class="information__price_subtitle">$599.999</h3>
-                                    <button class="btn btn--white">Discover More</button>
+                                    <a href="templates/third.html" class="btn btn--white">Discover More</a>
                                 </div>
                             </div>
                             <picture class="information__img">
@@ -191,14 +192,10 @@
                     et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
                     ut
                     aliquip ex ea commodo</p>
-                <div class="about__btn">
-                    <button class="btn btn--yellow">View More</button>
-                </div>
+                <a class="btn btn--yellow" href="/templates/first.html">View More</a>
             </div>
             <div class="about__img img"></div>
-            <div class="about__btn_mobile">
-                <button class="btn btn--yellow">View More</button>
-            </div>
+            <a class="btn btn--yellow btn--yellow_mobile" href="/templates/first.html">View More</a>
         </section>
         <!--./ABOUT-->
         <section class="bg-lightgray">
@@ -263,7 +260,7 @@
                     </div>
 
                     <div class="products__cards card">
-                        <div class="card__box">
+                        <div class="card__box indent_btm">
                             <div class="card__header bg-gray">
                                 <h3 class="rate">4.0</h3>
                             </div>
@@ -285,7 +282,7 @@
                             </div>
                         </div>
 
-                        <div class="card__box">
+                        <div class="card__box indent_btm">
                             <div class="card__header bg-gray">
                                 <h3 class="rate">4.0</h3>
                             </div>
@@ -307,7 +304,7 @@
                             </div>
                         </div>
 
-                        <div class="card__box">
+                        <div class="card__box indent_btm">
                             <div class="card__header bg-gray">
                                 <h3 class="rate">4.0</h3>
                             </div>
@@ -329,11 +326,7 @@
                             </div>
                         </div>
                     </div>
-
-                    <div class="products__btn">
-                        <button class="btn btn--yellow">View More</button>
-                    </div>
-
+                    <a href="templates/second.html" class="btn btn--yellow btn--products">View More</a>
                 </div>
             </div>
         </section>
@@ -356,7 +349,7 @@
             </div>
         </section>
         <!--./OVERVIEW-->
-        <section class="advantages">
+        <section class="advantages" id="services">
             <div class="container">
 
                 <div class="text">
@@ -488,7 +481,7 @@
                                 labore et dolore magna aliqua.</p>
                         </div>
                         <div class="response-block__contacts">
-                            <button class="btn response--btn">Contacs Us</button>
+                            <a href="templates/fifth.html" class="btn response--btn">Contacs Us</a>
                             <div class="response-block__phone">
                                 <img src="/img/phoneicon.svg" alt="">
                                 <a href="tel:224000221133">224 000 22 11 33</a>
@@ -507,7 +500,7 @@
                 <div class="footer__column footer__column_1">
 
                     <div class="footer__text">
-                        <a href="#">
+                        <a href="#" data-scroll="#header">
                             <h1 class="logo"><span style="color: #FFD600">KAR</span>BOX</h1>
                         </a>
                         <p class="footer__subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -540,11 +533,12 @@
                 <div class="footer__column footer__column_2">
                     <ul class="menu__list">
                         <li class="menu__item_title"><a href="" class="menu__link">Quick Links</a></li>
-                        <li class="menu__item"><a href="" class="menu__link">Home</a></li>
-                        <li class="menu__item"><a href="" class="menu__link">About</a></li>
-                        <li class="menu__item"><a href="" class="menu__link">Services</a></li>
-                        <li class="menu__item"><a href="" class="menu__link">Collections</a></li>
-                        <li class="menu__item"><a href="" class="menu__link">Blog</a></li>
+                        <li class="menu__item"><a href="" class="menu__link" data-scroll="#header">Home</a></li>
+                        <li class="menu__item"><a href="" class="menu__link" data-scroll="#about">About</a></li>
+                        <li class="menu__item"><a href="" class="menu__link" data-scroll="#services">Services</a></li>
+                        <li class="menu__item"><a href="" class="menu__link" data-scroll="#products">Collections</a>
+                        </li>
+                        <li class="menu__item"><a href="" class="menu__link" data-scroll="#testimonials">Blog</a></li>
                     </ul>
                 </div>
 

@@ -5,31 +5,29 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="stylesheet" href="../css/style.min.css">
     <title>FIFTH PAFE</title>
 </head>
 
 <body>
-    <header class="header">
+    <header class="header" id="header">
         <div class="container_big">
-            <div class="bar">
-                <a href="#">
+            <div class="bar" id="bar">
+                <a href="../index.html">
                     <h1 class="logo"><span style="color: #FFD600">KAR</span>BOX</h1>
                 </a>
                 <nav class="menu header__menu" id="header__menu">
                     <ul class="menu__list">
-                        <li class="menu__item active" data-menuanchor="home"><a href="#home" class="menu__link">Home</a>
+                        <li class="menu__item active"><a href="../index.html" class="menu__link">Home</a>
                         </li>
-                        <li class="menu__item" data-menuanchor="about"><a href="#about" class="menu__link">About</a>
+                        <li class="menu__item"><a href="../templates/first.html" class="menu__link">About</a>
                         </li>
-                        <li class="menu__item" data-menuanchor=""><a href="#" class="menu__link">Services</a></li>
-                        <li class="menu__item" data-menuanchor="products"><a href="#products"
-                                class="menu__link">Collections</a></li>
-                        <li class="menu__item" data-menuanchor="testimonials"><a href="#testimonials"
-                                class="menu__link">Blog</a></li>
+                        <li class="menu__item"><a href="../templates/fourth.html" class="menu__link">Services</a></li>
+                        <li class="menu__item"><a href="/templates/second.html" class="menu__link">Collections</a></li>
+                        <li class="menu__item"><a href="#" class="menu__link">Blog</a></li>
                     </ul>
                 </nav>
-                <button class="btn btn--black" data-menuanchor="footer">Contact us</button>
+                <button class="btn btn--black" data-scroll="#footer">Contact us</button>
             </div>
             <div class="bar-mobile bar-mobile_home">
                 <a href="#">
@@ -37,11 +35,11 @@
                 </a>
                 <nav class="menu header__menu" id="header__menu">
                     <ul class="menu__list">
-                        <li class="menu__item active" data-menuanchor="home"><a href="#home" class="menu__link">Home</a>
+                        <li class="menu__item active"><a href="#" class="menu__link" data-scroll="#header">Home</a>
                         </li>
                     </ul>
                 </nav>
-                <button class="btn btn--black" data-menuanchor="footer">Contact us</button>
+                <button class="btn btn--black" data-scroll="#footer">Contact us</button>
             </div>
         </div>
     </header>
@@ -165,7 +163,7 @@
                 <div class="footer__column footer__column_1">
 
                     <div class="footer__text">
-                        <a href="#">
+                        <a href="#" data-scroll="#header">
                             <h1 class="logo"><span style="color: #FFD600">KAR</span>BOX</h1>
                         </a>
                         <p class="footer__subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -198,11 +196,12 @@
                 <div class="footer__column footer__column_2">
                     <ul class="menu__list">
                         <li class="menu__item_title"><a href="" class="menu__link">Quick Links</a></li>
-                        <li class="menu__item"><a href="" class="menu__link">Home</a></li>
-                        <li class="menu__item"><a href="" class="menu__link">About</a></li>
-                        <li class="menu__item"><a href="" class="menu__link">Services</a></li>
-                        <li class="menu__item"><a href="" class="menu__link">Collections</a></li>
-                        <li class="menu__item"><a href="" class="menu__link">Blog</a></li>
+                        <li class="menu__item"><a href="" class="menu__link" data-scroll="#header">Home</a></li>
+                        <li class="menu__item"><a href="" class="menu__link" data-scroll="#about">About</a></li>
+                        <li class="menu__item"><a href="" class="menu__link" data-scroll="#services">Services</a></li>
+                        <li class="menu__item"><a href="" class="menu__link" data-scroll="#products">Collections</a>
+                        </li>
+                        <li class="menu__item"><a href="" class="menu__link" data-scroll="#testimonials">Blog</a></li>
                     </ul>
                 </div>
 
@@ -251,9 +250,9 @@
     </footer>
     <!-- /.FOOTER -->
 
-    
+
     <!-- SCRIPTS -->
-    <script src="js/main.min.js"></script>
+    <script src="../js/main.min.js"></script>
 </body>
 
 </html>
