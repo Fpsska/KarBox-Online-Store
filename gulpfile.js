@@ -10,7 +10,7 @@ const del = require("del"); // удаление dist-папки
 const ghpages = require('gh-pages'); // gh-pages for dist folder
 
 ghpages.publish('dist', {
-    repo: 'https://github.com/Fpsska/KarBox-Online-Store.git',
+    repo: 'https://github.com/Fpsska/KarBox-Online-Store.git', //npm run deploy
     message: 'Auto-generated commit'
 });
 
@@ -83,7 +83,9 @@ function build() {
     return src([
         "app/*.html",
         "app/css/style.min.css",
-        "app/js/main.min.js" 
+        "app/js/main.min.js",
+        "app/fonts/**/*", 
+        "app/templates/**/*"
     ], { base: "app" })
         .pipe(dest("dist"));
 }

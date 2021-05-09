@@ -119,7 +119,6 @@ document.addEventListener("DOMContentLoaded", () => {
             event.preventDefault();
 
             const elementID = event.currentTarget.getAttribute("data-scroll").substr(1);
-            console.log(elementID);
 
             document.getElementById(elementID).scrollIntoView({
                 behavior: "smooth"
@@ -131,25 +130,70 @@ document.addEventListener("DOMContentLoaded", () => {
 
     let bar = document.querySelector("#bar");
     let barHeight = bar.clientHeight;
-    let scrollPos = window.scrollY;
 
-    window.addEventListener('scroll', function () {
-        scrollPos = this.scrollY;
+    let barMobile = document.querySelector(".bar-mobile");
+    let barMobileHeight = barMobile.clientHeight;
 
-        if (scrollPos > barHeight) {
+    window.addEventListener('scroll', () => {
+        let scrollPos = window.pageYOffset;
+
+        if (scrollPos > barHeight || scrollPos > barMobileHeight) {
             bar.classList.add("bar-sticky");
+            barMobile.classList.add("bar-sticky");
             document.querySelectorAll("button[data-scroll]").forEach(item => {
                 item.style.borderRadius = "10px"
             })
         } else {
             bar.classList.remove("bar-sticky");
+            barMobile.classList.remove("bar-sticky");
             document.querySelectorAll("button[data-scroll]").forEach(item => {
                 item.style.borderRadius = "0";
             })
         }
-
     });
     // /.HEADER FIXED
+
+
+    let animateItems = document.querySelectorAll(".animate");
+    let btn = document.querySelectorAll(".btn");
+    
+    window.addEventListener("scroll", () => {
+        if (animateItems.length > 0) {
+            let animOnScroll = () => {
+                animateItems.forEach(item => {
+                    let animItem = item;
+                    let animItemHeight = animItem.offsetHeight; // высота анимированно объекта
+                    let animItemOffset = offset(animItem).top; // позиция анимированно объекта от верха страницы
+                    let animStart = 4; // коэфф страрта анимации
+
+                    let animItemPoint = window.innerHeight - animItemHeight / animStart; // точка старта анимации
+                    if (animItemHeight > window.innerHeight) {
+                        animItemPoint = window.innerHeight - window.innerHeight / animStart;
+                    }
+
+                    // pageYOffset - данные о кол-ве проскроленных пикселей
+                    if ((pageYOffset > animItemOffset - animItemPoint) && pageYOffset < (animItemOffset + animItemHeight)) {
+                        animItem.classList.add("animate")
+                    } else {
+                        animItem.classList.remove("animate")
+                    }
+                })
+            }
+
+            let offset = (el) => {  // функция получения значения offsetTo (кроссбраузерно)
+                const rect = el.getBoundingClientRect();
+                scrollLeft = window.pageXOffset || document.documentElement.scrollLeft,
+                    scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+                return { top: rect.top + scrollTop, left: rect.left + scrollLeft }
+            }
+            setTimeout(() => { // задержка для функции 
+                animOnScroll();
+            }, 50)
+        }
+    })
+    // /.ANIMATE FOR ITEMS
+
+
 
 });
 

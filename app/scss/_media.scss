@@ -25,10 +25,6 @@
         margin-right: 1em !important;
     }
     // /.FIRST PAGE
-    .social__wrapper {
-        left: 100% !important;
-        display: none !important;
-    }
     .about__footer {
         padding: 0 0.25em 10em 0.25em;
     }
@@ -239,6 +235,11 @@
             }
         }
     }
+    .social__img_icon {
+        padding: 1em !important;
+        width: 3.5em !important;
+        height: 3.5em !important;
+    }
     // /.MAIN PAGE
     .selection__column {
         &::after {
@@ -316,11 +317,10 @@
             left: 98.4%;
         }
     }
-    .social__img {
-        margin-right: 0.5em;
-        &:nth-child(5) {
-            margin: 0;
-        }
+    .social__img_icon {
+        padding: .75em !important;
+        width: 3em !important;
+        height: 3em !important;
     }
     // /.MAIN PAGE
     .skills_black__title {
@@ -390,9 +390,6 @@
                 margin-right: 0.5em;
             }
         }
-    }
-    .social {
-        display: none;
     }
     // /.MAIN PAGE
     .selection__wrapper {
@@ -705,6 +702,14 @@
         top: 94% !important;
         left: 50% !important;
     }
+    .footer__text {
+        margin-bottom: 1em;
+    }
+    .social__img_icon {
+        padding: .55em !important;
+        width: 2.5em !important;
+        height: 2.5em !important;
+    }
     // /.MAIN PAGE
     .about_first {
         padding: 15em 0 5em 0 !important;
@@ -814,6 +819,11 @@
     .contacts__footer {
         padding: 8em 0.5em 5em 0.5em;
     }
+    .menu__item.active {
+        &::before {
+            top: 80% !important;
+        }
+    }
 }
 
 @media (max-width: 960px) {
@@ -845,6 +855,11 @@
                 left: 12%;
             }
         }
+    }
+    .social__img_icon {
+        padding: .45em !important;
+        width: 2em !important;
+        height: 2em !important;
     }
     // /.MAIN PAGE
     .btn--yellow {
@@ -966,6 +981,9 @@
     }
     .footer-input__title {
         margin-bottom: 0 !important;
+    }
+    .footer-input__text {
+        margin-bottom: 2em;
     }
     // /.MAIN PAGE
     .btn--yellow {
@@ -1612,6 +1630,11 @@
     }
     #vendor__slider-mobile {
         display: block !important;
+    }
+    .social__img_icon {
+        padding: .3em !important;
+        width: 1.8em !important;
+        height: 1.8em !important;
     }
     // /.MAIN PAGE
     .about_first {

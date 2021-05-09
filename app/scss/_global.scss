@@ -26,10 +26,7 @@ a {
     list-style: none;
 }
 
-h2 {
-    line-height: normal;
-}
-
+h2,
 h3 {
     line-height: normal;
 }
@@ -48,6 +45,20 @@ p {
     padding: 1.35em 1.5em;
     outline: none;
 }
+.btn.animate {
+    animation: animateBtn 2s infinite;
+}
+@keyframes animateBtn {
+    0% {
+        transform: scale3d(1, 1, 1);
+    }
+    50% {
+        transform: scale3d(0.95, 0.95, 0.95);
+    }
+    100% {
+        transform: scale3d(1, 1, 1);
+    }
+}
 
 button {
     text-decoration: none;
@@ -63,22 +74,12 @@ input {
 input:focus {
     border: 1px solid #ffd600 !important;
 }
-// input:focus:invalid {
-//     border: 1px solid red !important;
-// }
-// input:valid {
-//     border: 1px solid green !important;
-// }
 input:invalid {
     color: #ff0000 !important;
 }
 input:valid {
-    // color: rgb(5, 255, 5) !important;
     color: #000;
 }
-// input[required] {
-//     background-color: red !important;
-// }
 
 //*************./NULLSTYLES*************//
 
@@ -254,7 +255,7 @@ body {
     background-color: $dark;
     text-transform: uppercase;
     align-items: center;
-    padding: 2em 0;
+    padding: 1em 0 2em 0;
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -262,8 +263,9 @@ body {
 }
 
 .bar-sticky {
+    width: 100%;
     z-index: 4;
-    padding: .5em 1em;
+    padding: 0.5em 1em;
     position: fixed;
     top: 0;
     left: 0;
@@ -271,18 +273,18 @@ body {
     animation: smoothScroll 1s forwards;
 }
 @keyframes smoothScroll {
-	0% {
-		transform: translateY(-30px);
+    0% {
+        transform: translateY(-30px);
         opacity: 1;
-	}
-	100% {
-		transform: translateY(0px);
-        opacity: .95;
-	}
+    }
+    100% {
+        transform: translateY(0px);
+        opacity: 0.95;
+    }
 }
 
 .bar_light {
-    background-color: $first;
+    background-color: $first !important;
     .menu__link {
         @extend %rb-medium;
         color: $dark;
@@ -300,7 +302,9 @@ body {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    padding: 1em 0;
+    background-color: #242424;
+    z-index: 5;
+    padding: 0.8em 0;
     .logo {
         margin-left: 1em;
     }
@@ -346,6 +350,21 @@ body {
         margin: 0 auto;
     }
 }
+.text__subtitle.animate {
+    animation: animateText 1s cubic-bezier(0.215, 0.610, 0.355, 1.000) 1s both;
+}
+@keyframes animateText {
+    0% {
+        letter-spacing: -0.5em;
+        opacity: 0;
+    }
+    40% {
+        opacity: 0.6;
+    }
+    100% {
+        opacity: 1;
+    }
+}
 
 .text_first {
     padding: 5em 0 10em 0 !important;
@@ -369,6 +388,18 @@ body {
     background-color: $dark;
 }
 
+.linkedIn,
+.twitter,
+.facebook {
+    fill: #464646;
+    opacity: 1;
+    width: 2em;
+    height: 2em;
+}
+.twitter {
+    margin: 2em 0;
+}
+
 .text-section {
     margin-bottom: 5em;
 }
@@ -386,6 +417,7 @@ body {
 }
 
 .about {
+    overflow: hidden;
     display: flex;
     justify-content: space-between;
     &__text {
@@ -429,11 +461,8 @@ body {
         justify-content: space-between;
         width: auto;
         position: absolute;
-        top: 10%;
+        top: 17%;
         left: 105%;
-        .social__img {
-            margin-top: 4em;
-        }
     }
 }
 
@@ -1198,8 +1227,9 @@ body {
     }
     .footer-input {
         &__text {
-            max-width: 85%;
-            padding-bottom: 20px;
+            max-width: 100%;
+            text-align: center;
+            //padding-bottom: 20px;
         }
         &__title {
             @extend %rb-bold;
@@ -1253,18 +1283,17 @@ body {
             flex-wrap: wrap;
             justify-content: space-between;
         }
-        &__img {
-            border: 1px solid #fff;
-            padding: 15px;
-            &:nth-child(4) {
-                padding: 15px 20px;
-            }
-            &:nth-child(1) {
-                padding: 15px 12px;
-            }
-        }
         &__img_icon {
-            display: block;
+            padding: 1.2em;
+            border: 1px solid #fff;
+        }
+        svg {
+            fill: #fff;
+            opacity: 0.3;
+            &:hover {
+                opacity: 1;
+                transition: 0.5s linear;
+            }
         }
     }
 
