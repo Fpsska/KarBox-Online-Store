@@ -46,6 +46,11 @@
         padding: 1.5em 2em;
         color: $first;
         background: rgba(255, 255, 255, 0.08);
+        transform: scale(1);
+        &:active {
+            transform: scale(.85);
+            transition: .8s linear;
+        }
     }
     .information {
         padding: 3em 0 3em 0;
@@ -265,13 +270,27 @@
     opacity: 1;
     transform: translate(0px, 0px);
 }
+.about__img_team.animate {
+    opacity: 1;
+    transform: translate(0px, 0px);
+}
+.about__img_history.animate {
+    opacity: 1;
+    transform: translate(0px, 0px);
+}
 
 .about__img_history {
     background-image: url(../img/history-1.jpg);
+    opacity: 0;
+    transition: 1.1s linear;
+    transform: translate(50%, 0px);
 }
 
 .about__img_team {
     background-image: url(../img/about-v1.3.jpg);
+    opacity: 0;
+    transition: 1.1s linear;
+    transform: translate(-50%, 0px);
 }
 
 .about__text_fourt {
@@ -384,7 +403,7 @@
             border: 1.5px solid $dark;
             position: relative;
             &::before {
-                content: url(/img/pagination-arrw.svg);
+                content: url(../img/pagination-arrw.svg);
                 color: $dark;
                 position: absolute;
                 top: 30%;
@@ -407,9 +426,10 @@
     position: relative;
     align-items: center;
     padding: 10px 50px 10px 10px;
+    margin-right: 1em;
     &::after {
-        content: url(/img/products-arrw.svg);
-        top: 38%;
+        content: url(../img/products-arrw.svg);
+        top: 25%;
         left: 87%;
         position: absolute;
     }
@@ -449,7 +469,6 @@
         padding: 0 0 56.25% 0;
         height: 0;
         overflow: hidden;
-        // max-width: 1340px;
         height: 530px;
         background-color: $gray;
         &__iframe {
@@ -502,16 +521,17 @@
 .footer__column {
     .menu__item {
         @extend %rb-thin;
-        opacity: 0.5;
     }
     .menu__link {
         letter-spacing: 1px;
         font-size: 18px;
         line-height: 44px;
         color: $first;
+        opacity: 0.5;
         &:hover {
+            opacity: 1;
             color: $yellow;
-            transition: 0.05s linear;
+            transition: 0.2s linear;
         }
     }
     .menu__item_title {
