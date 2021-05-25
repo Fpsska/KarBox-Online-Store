@@ -72,14 +72,9 @@ input {
     transition: 0.2s linear;
 }
 input:focus {
-    border: 1px solid #ffd600 !important;
+    border: 1px solid rgb(214, 214, 214) !important;
 }
-input:invalid {
-    color: #ff0000 !important;
-}
-input:valid {
-    color: #000;
-}
+
 
 //*************./NULLSTYLES*************//
 

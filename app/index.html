@@ -178,7 +178,7 @@
             </section>
 
         </div>
-    </header> 
+    </header>
     <!--./HEADER-->
     <main>
         <section class="about container_description" id="about">
@@ -602,13 +602,11 @@
                                 sed do
                                 eiusmod tempor incididunt ut</p>
                         </div>
-                        <div class="footer-input__buttons">
-                            <input class="" name="email" style="text-transform: lowercase"
-                                placeholder="Enter your email here" type="email"
-                                pattern="[a-zA-Z0-9.!#$%&amp;’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)+"
-                                required>
-                            <button class="btn btn--input animate">Send</button>
-                        </div>
+                        <form action="/" method="POST" enctype="multipart/form-data" class="footer-input__buttons">
+                            <input class="form__email" name="email" placeholder="Enter your email here" type="email"
+                                required />
+                            <button class="btn btn--input animate" type="submit">Send</button>
+                        </form>
                     </div>
                 </div>
                 <select class="footer__column_media">

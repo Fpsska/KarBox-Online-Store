@@ -197,7 +197,7 @@ document.addEventListener("DOMContentLoaded", () => {
     })
     // /.ANIMATE FOR ITEMS
 
-    let tabsBtn= document.querySelectorAll(".tabs__position-item");
+    let tabsBtn = document.querySelectorAll(".tabs__position-item");
     let tabs = document.querySelectorAll(".tabs__descrpt");
 
     tabsBtn.forEach(item => {
@@ -210,7 +210,7 @@ document.addEventListener("DOMContentLoaded", () => {
             tabsBtn.forEach(item => {
                 item.classList.remove("active");
             })
-            
+
             tabs.forEach(item => {
                 item.classList.remove("active");
             })
@@ -221,6 +221,47 @@ document.addEventListener("DOMContentLoaded", () => {
     })
     // /. TABS (THIRD PAGE)
 
+    let name = document.querySelectorAll(".form__name");
+    let email = document.querySelectorAll(".form__email");
+    let subject = document.querySelectorAll(".form__subject");
+
+    email.forEach(item => {
+        item.onkeydown = function () {
+            const regex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+            
+            if (regex.test(item.value)) {
+                item.style.color = 'green'
+            } else {
+                item.style.color = 'red'
+            }
+        }
+    })
+
+    name.forEach(item => {
+        item.onkeydown = function () {
+            const regex = /^([\w]{3,})+\s+([\w\s]{3,})+$/i;
+            
+            if (regex.test(item.value)) {
+                item.style.color = 'green'
+            } else {
+                item.style.color = 'red'
+            }
+        }
+    })
+    
+    subject.forEach(item => {
+        item.onkeydown = function () {
+            const regex = /[a-zA-Z]+/;
+            
+            if (regex.test(item.value)) {
+                item.style.color = 'green'
+            } else {
+                item.style.color = 'red'
+            }
+        }
+    })
+
+    // /. INPUT VALIDATION
 });
 
 
