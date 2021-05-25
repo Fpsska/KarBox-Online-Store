@@ -189,7 +189,8 @@
                             <div class="tabs__wrapper">
                                 <div class="tabs__menu">
                                     <div class="tabs__position">
-                                        <button class="tabs__position-item active" data-tab="#tab_1">Description</button>
+                                        <button class="tabs__position-item active"
+                                            data-tab="#tab_1">Description</button>
                                         <button class="tabs__position-item" data-tab="#tab_2">Discussion</button>
                                         <button class="tabs__position-item" data-tab="#tab_3">Reviews</button>
                                     </div>
@@ -312,7 +313,7 @@
                                             exercitation ullamco
                                             laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
                                             in
-                                            reprehenderit in
+
                                             voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
                                             sint
                                             occaecat cupidatat
@@ -584,13 +585,11 @@
                                 sed do
                                 eiusmod tempor incididunt ut</p>
                         </div>
-                        <div class="footer-input__buttons">
-                            <input class="" name="email" style="text-transform: lowercase"
-                                placeholder="Enter your email here" type="email"
-                                pattern="[a-zA-Z0-9.!#$%&amp;’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)+"
-                                required>
-                            <button class="btn btn--input animate">Send</button>
-                        </div>
+                        <form action="/" method="POST" enctype="multipart/form-data" class="footer-input__buttons">
+                            <input class="form__email" name="email" placeholder="Enter your email here" type="email"
+                                required />
+                            <button class="btn btn--input animate" type="submit">Send</button>
+                        </form>
                     </div>
                 </div>
                 <select class="footer__column_media">

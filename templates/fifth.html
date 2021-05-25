@@ -2,10 +2,10 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/style.min.css">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/style.min.css" />
     <title>FIFTH PAFE</title>
 </head>
 
@@ -14,32 +14,45 @@
         <div class="container_big">
             <div class="bar" id="bar">
                 <a href="../index.html">
-                    <h1 class="logo"><span style="color: #FFD600">KAR</span>BOX</h1>
+                    <h1 class="logo"><span style="color: #ffd600">KAR</span>BOX</h1>
                 </a>
                 <nav class="menu header__menu" id="header__menu">
                     <ul class="menu__list">
-                        <li class="menu__item active"><a href="#" class="menu__link" data-scroll="#header">Home</a>
+                        <li class="menu__item active">
+                            <a href="#" class="menu__link" data-scroll="#header">Home</a>
                         </li>
-                        <li class="menu__item"><a href="../templates/first.html" class="menu__link">About</a>
+                        <li class="menu__item">
+                            <a href="../templates/first.html" class="menu__link">About</a>
                         </li>
-                        <li class="menu__item"><a href="../templates/fourth.html" class="menu__link">Services</a></li>
-                        <li class="menu__item"><a href="/templates/second.html" class="menu__link">Collections</a></li>
-                        <li class="menu__item"><a href="#" class="menu__link">Blog</a></li>
+                        <li class="menu__item">
+                            <a href="../templates/fourth.html" class="menu__link">Services</a>
+                        </li>
+                        <li class="menu__item">
+                            <a href="/templates/second.html" class="menu__link">Collections</a>
+                        </li>
+                        <li class="menu__item">
+                            <a href="#" class="menu__link">Blog</a>
+                        </li>
                     </ul>
                 </nav>
-                <button class="btn btn--black" data-scroll="#footer">Contact us</button>
+                <button class="btn btn--black" data-scroll="#footer">
+                    Contact us
+                </button>
             </div>
             <div class="bar-mobile bar-mobile_home">
                 <a href="#">
-                    <h1 class="logo"><span style="color: #FFD600">KAR</span>BOX</h1>
+                    <h1 class="logo"><span style="color: #ffd600">KAR</span>BOX</h1>
                 </a>
                 <nav class="menu header__menu" id="header__menu">
                     <ul class="menu__list">
-                        <li class="menu__item active"><a href="#" class="menu__link" data-scroll="#header">Home</a>
+                        <li class="menu__item active">
+                            <a href="#" class="menu__link" data-scroll="#header">Home</a>
                         </li>
                     </ul>
                 </nav>
-                <button class="btn btn--black" data-scroll="#footer">Contact us</button>
+                <button class="btn btn--black" data-scroll="#footer">
+                    Contact us
+                </button>
             </div>
         </div>
     </header>
@@ -49,49 +62,52 @@
             <div class="contacts__header">
                 <div class="text text_fourth">
                     <h3 class="text__subtitle">Contact Us</h3>
-                    <p class="text__descrpt">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                        tempor
-                        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                        ullamco laboris nisi ut aliquip ex ea.</p>
+                    <p class="text__descrpt">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                        eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                        enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                        nisi ut aliquip ex ea.
+                    </p>
                 </div>
                 <div class="contacts__background">
-                    <img class="contacts__img " src="../img/mapBackground.svg" alt="map">
+                    <img class="contacts__img" src="../img/mapBackground.svg" alt="map" />
                 </div>
                 <div class="contacts__form">
-                    <div class="form">
+                    <form class="form" action="/" method="POST" enctype="multipart/form-data">
                         <div class="form__section_1">
-                            <h2 class="form__text form__name_title">Full Name</h2>
-                            <h3 class="form__text form__email_title">Email</h3>
-                            <input class="form__name" name="name" placeholder="Petrov Andrey Pavlovich" type="text"
-                                pattern="[a-zA-z]+\s[a-zA-z]+|[a-zA-z]+\s[a-zA-z]+\s[a-zA-Z]+" required>
-                            <input class="form__email" name="email" placeholder="@mail.ru" type="email"
-                                pattern="[a-zA-Z0-9.!#$%&amp;’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)+"
-                                required>
+                            <label for="" class="form__text form__name_title">Full Name</label>
+                            <input class="form__name" name="name" placeholder="Petrov Andrey" type="text" required />
+
+                            <label for="" class="form__text form__email_title">Email</label>
+                            <input class="form__email" name="email" type="email" placeholder="example@mail.ru"
+                                required />
                         </div>
                         <!-- /.form__section_1 -->
                         <div class="form__section_2">
-                            <h2 class="form__text form__subject_title">Subject</h2>
-                            <input class="form__subject" name="text" placeholder="Some topic" type="text"
-                                pattern="[a-zA-Z]+" required>
+                            <label for="" class="form__text form__subject_title">Subject</label>
+                            <input class="form__subject" name="text" type="text" maxlength="15" placeholder="Some topic"
+                                required />
                         </div>
                         <!-- /.form__section_2 -->
                         <div class="form__section_3">
-                            <h2 class="form__text form__message_title">Message</h2>
-                            <input class="form__message" name="text" placeholder="Write your message..." type="text">
+                            <label for="" class="form__text form__message_title">Message</label>
+                            <input class="form__message" name="text" type="text" placeholder="Write your message..." />
                         </div>
                         <!-- /.form__section_3 -->
                         <div class="form__section_4">
                             <div class="checkBox">
-                                <input id="ch1" type="checkBox" class="checkBox__input">
-                                <label for="ch1" class="checkBox__label">Accept <span style="color: #ffd600">terms &
-                                        conditions</span></label>
+                                <input id="cheackbox" type="checkbox" class="checkBox__input" required />
+                                <label for="cheackbox" class="checkBox__label">Accept
+                                    <span style="color: #ffd600">terms & conditions</span></label>
                             </div>
                             <div class="form__btn">
-                                <button class="btn btn--yellow animate">SEND MESSAGE</button>
+                                <button class="btn btn--yellow animate" type="submit">
+                                    SEND MESSAGE
+                                </button>
                             </div>
                         </div>
                         <!-- /.form__section_4 -->
-                    </div>
+                    </form>
                 </div>
             </div>
         </div>
@@ -100,54 +116,65 @@
                 <div class="location">
                     <div class="location__text">
                         <h2 class="location__title">Our Dealer Locations</h2>
-                        <p class="location__subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-                            nostrud exercitation ullamco laboris nisi ut aliquip ex ea.</p>
+                        <p class="location__subtitle">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                            enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                            nisi ut aliquip ex ea.
+                        </p>
                     </div>
                     <div class="location__wrapper">
                         <div class="location__item">
                             <h2 class="location__city">London,</h2>
                             <h3 class="location__country">United Kingdom</h3>
-                            <p class="location__item-subtitle">59 Victoria Street <br>
-                                London <br>
-                                EC43 5BI </p>
+                            <p class="location__item-subtitle">
+                                59 Victoria Street <br />
+                                London <br />
+                                EC43 5BI
+                            </p>
                             <div class="response-block__phone">
-                                <img src="../img/phoneicon.svg" alt="">
+                                <img src="../img/phoneicon.svg" alt="" />
                                 <a href="tel:224000221133">224 000 22 11 33</a>
                             </div>
                         </div>
                         <div class="location__item">
                             <h2 class="location__city">Sydney,</h2>
                             <h3 class="location__country">Australia</h3>
-                            <p class="location__item-subtitle">3 Doris St, <br>
-                                North Sydney <br>
-                                NSW 2060 </p>
+                            <p class="location__item-subtitle">
+                                3 Doris St, <br />
+                                North Sydney <br />
+                                NSW 2060
+                            </p>
                             <div class="response-block__phone">
-                                <img src="../img/phoneicon.svg" alt="">
+                                <img src="../img/phoneicon.svg" alt="" />
                                 <a href="tel:224000221133">224 000 22 11 33</a>
                             </div>
                         </div>
                         <div class="location__item">
                             <h2 class="location__city">Dhaka,</h2>
                             <h3 class="location__country">BANGLADESH</h3>
-                            <p class="location__item-subtitle">Phoenix Tower, <br>
-                                2nd & 3rd Floor 407, <br>
-                                Tejgoan Industrial Area <br>
-                                Dhaka 1208</p>
+                            <p class="location__item-subtitle">
+                                Phoenix Tower, <br />
+                                2nd & 3rd Floor 407, <br />
+                                Tejgoan Industrial Area <br />
+                                Dhaka 1208
+                            </p>
                             <div class="response-block__phone">
-                                <img src="../img/phoneicon.svg" alt="">
+                                <img src="../img/phoneicon.svg" alt="" />
                                 <a href="tel:224000221133">224 000 22 11 33</a>
                             </div>
                         </div>
                         <div class="location__item">
                             <h2 class="location__city">Jakarta,</h2>
                             <h3 class="location__country">INDONESIA</h3>
-                            <p class="location__item-subtitle">Jl. Jend. Sudirman <br>
-                                No.Kav 47-48, <br>
-                                Karet Semanggi, <br>
-                                Jakarta Selatan </p>
+                            <p class="location__item-subtitle">
+                                Jl. Jend. Sudirman <br />
+                                No.Kav 47-48, <br />
+                                Karet Semanggi, <br />
+                                Jakarta Selatan
+                            </p>
                             <div class="response-block__phone">
-                                <img src="../img/phoneicon.svg" alt="">
+                                <img src="../img/phoneicon.svg" alt="" />
                                 <a href="tel:224000221133">224 000 22 11 33</a>
                             </div>
                         </div>
@@ -161,21 +188,20 @@
         <div class="container">
             <div class="footer__inner">
                 <div class="footer__column footer__column_1">
-
                     <div class="footer__text">
                         <a href="#" data-scroll="#header">
-                            <h1 class="logo"><span style="color: #FFD600">KAR</span>BOX</h1>
+                            <h1 class="logo"><span style="color: #ffd600">KAR</span>BOX</h1>
                         </a>
-                        <p class="footer__subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                            eiusmod
-                            tempor incididunt ut labore et dolore magna aliqua.</p>
+                        <p class="footer__subtitle">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                            eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                        </p>
                     </div>
 
                     <div class="social">
                         <h2 class="social__text">Follow Us</h2>
 
                         <ul class="social__wrapper">
-
                             <li class="social__img">
                                 <a class="social__link" href="https://www.youtube.com/" target="_blank">
                                     <svg class="social__img_icon" height="4em" viewBox="-21 -117 682.66672 682"
@@ -231,46 +257,64 @@
                             </li>
                         </ul>
                     </div>
-
                 </div>
 
                 <div class="footer__column footer__column_2">
                     <ul class="menu__list">
                         <li class="menu__item_title menu__link">Quick Links</li>
-                        <li class="menu__item"><a href="" class="menu__link" data-scroll="#header">Home</a></li>
-                        <li class="menu__item"><a href="" class="menu__link" data-scroll="#about">About</a></li>
-                        <li class="menu__item"><a href="" class="menu__link" data-scroll="#services">Services</a></li>
-                        <li class="menu__item"><a href="" class="menu__link" data-scroll="#products">Collections</a>
+                        <li class="menu__item">
+                            <a href="" class="menu__link" data-scroll="#header">Home</a>
                         </li>
-                        <li class="menu__item"><a href="" class="menu__link" data-scroll="#testimonials">Blog</a></li>
+                        <li class="menu__item">
+                            <a href="" class="menu__link" data-scroll="#about">About</a>
+                        </li>
+                        <li class="menu__item">
+                            <a href="" class="menu__link" data-scroll="#services">Services</a>
+                        </li>
+                        <li class="menu__item">
+                            <a href="" class="menu__link" data-scroll="#products">Collections</a>
+                        </li>
+                        <li class="menu__item">
+                            <a href="" class="menu__link" data-scroll="#testimonials">Blog</a>
+                        </li>
                     </ul>
                 </div>
 
                 <div class="footer__column footer__column_3">
                     <ul class="menu__list">
                         <li class="menu__item_title menu__link">Support</li>
-                        <li class="menu__item"><a href="" class="menu__link">Affiliates</a></li>
-                        <li class="menu__item"><a href="" class="menu__link">Sitemap</a></li>
-                        <li class="menu__item"><a href="" class="menu__link">Cancelation Policy</a></li>
-                        <li class="menu__item"><a href="" class="menu__link">Privacy Policy</a></li>
-                        <li class="menu__item"><a href="" class="menu__link">Legal Disclaimer</a></li>
+                        <li class="menu__item">
+                            <a href="" class="menu__link">Affiliates</a>
+                        </li>
+                        <li class="menu__item">
+                            <a href="" class="menu__link">Sitemap</a>
+                        </li>
+                        <li class="menu__item">
+                            <a href="" class="menu__link">Cancelation Policy</a>
+                        </li>
+                        <li class="menu__item">
+                            <a href="" class="menu__link">Privacy Policy</a>
+                        </li>
+                        <li class="menu__item">
+                            <a href="" class="menu__link">Legal Disclaimer</a>
+                        </li>
                     </ul>
                 </div>
                 <div class="footer__column footer__column_4">
                     <div class="footer-input">
                         <div class="footer-input__text">
                             <h2 class="footer-input__title">Subscribe</h2>
-                            <p class="footer-input__subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                                sed do
-                                eiusmod tempor incididunt ut</p>
+                            <p class="footer-input__subtitle">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                                do eiusmod tempor incididunt ut
+                            </p>
                         </div>
-                        <div class="footer-input__buttons">
-                            <input class="" name="email" style="text-transform: lowercase"
-                                placeholder="Enter your email here" type="email"
-                                pattern="[a-zA-Z0-9.!#$%&amp;’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)+"
-                                required>
-                            <button class="btn btn--input animate">Send</button>
-                        </div>
+                        <form action="https://jsonplaceholder.typicode.com/posts" method="POST"
+                            enctype="multipart/form-data" class="footer-input__buttons">
+                            <input class="form__email" name="email" placeholder="Enter your email here" type="email"
+                                required />
+                            <button class="btn btn--input animate" type="submit">Send</button>
+                        </form>
                     </div>
                 </div>
                 <select class="footer__column_media">
@@ -287,10 +331,8 @@
         <div class="copyrite">
             <h2 class="copyrite__text">KARDILER - © 2020 All Rights Reserved</h2>
         </div>
-
     </footer>
     <!-- /.FOOTER -->
-
 
     <!-- SCRIPTS -->
     <script src="../js/main.min.js"></script>
