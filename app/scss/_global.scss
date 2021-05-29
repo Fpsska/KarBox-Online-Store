@@ -1293,9 +1293,6 @@ body {
         align-items: stretch;
         color: $first;
     }
-    &__column_media {
-        display: none;
-    }
     &__text {
         display: flex;
         flex-direction: column;
