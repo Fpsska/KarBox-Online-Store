@@ -313,6 +313,9 @@
             }
         }
     }
+    .testmnls-slider__text {
+        padding: 0;
+    }
     .about__text {
         max-width: 540px !important;
     }
@@ -694,7 +697,7 @@
         width: 100% !important;
     }
     .testmnls-slider__text {
-        max-width: 65%;
+        max-width: 55%;
     }
     .slider__img {
         width: 100%;
@@ -936,6 +939,9 @@
             }
         }
     }
+    .testmnls-slider__decoration {
+        display: none;
+    }
     .vendor__title {
         margin-bottom: 1em;
     }
@@ -1072,6 +1078,10 @@
         height: 80px;
         width: 100px;
     }
+    .testmnls-slider__text {
+        font-size: 14px;
+        max-width: 50%;
+    }
     .badges__circle_left {
         left: 34%;
     }
@@ -1170,6 +1180,9 @@
     .testmnls-slider__decoration {
         height: 70px;
         width: 95px;
+    }
+    .testmnls-slider__text {
+        max-width: 45%;
     }
     .badges__circle_left {
         left: 32%;
@@ -1372,12 +1385,9 @@
     .text__subtitle {
         font-size: 55px !important;
     }
-    .testmnls-slider__text {
-        max-width: 55%;
-    }
-    .testmnls-slider__decoration {
-        display: none;
-    }
+    // .testmnls-slider__text {
+    //     max-width: 55%;
+    // }
     .slider-arw__testmn_right {
         left: 90.5% !important;
     }
@@ -1480,9 +1490,17 @@
                 left: 2%;
             }
         }
-    }
+    }   
     .testmnls-slider__text {
-        padding: 10px 5% !important;
+        font-size: 12px;
+        max-width: 100%;
+        margin: 0;
+        padding: 1em;
+    } 
+    .testmnls-slider__item {
+        display: flex;
+        flex-direction: column;
+        height: auto !important;
     }
     .response-block__inner {
         padding: 0 10% 0 10% !important;
@@ -1566,7 +1584,7 @@
         .text {
             &::before {
                 content: url(../img/skill-bg_mobilePT.svg) !important;
-                left: 5%;
+                left: 8%;
                 top: -3%;
             }
         }
@@ -1598,9 +1616,6 @@
     }
     .testmnls-slider__text {
         font-size: 12px !important;
-    }
-    .testmnls-slider__text {
-        padding: 1% 5% !important;
     }
     .slider-arw__testmn {
         display: none !important;
@@ -1885,19 +1900,6 @@
     .skills__item {
         max-width: 100%;
         margin-bottom: 4em;
-    }
-    .testmnls-slider__item {
-        display: flex;
-        flex-direction: column;
-        height: auto !important;
-    }
-    .testmnls-slider__decoration {
-        display: none;
-    }
-    .testmnls-slider__text {
-        font-size: 14px;
-        padding: 0.5em 1em !important;
-        max-width: 100%;
     }
     .testimonials {
         padding: 5em 0 0 0 !important;

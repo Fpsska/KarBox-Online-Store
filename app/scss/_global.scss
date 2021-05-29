@@ -900,6 +900,7 @@ body {
         @extend %rb-bold;
         font-size: 28px;
         margin-bottom: 40px;
+        flex-grow: 1;
     }
     &__img {
         height: 90px;
@@ -1221,6 +1222,8 @@ body {
     &__text {
         max-width: 785px;
         padding: 5px 5%;
+        @extend %rb-medium;
+        font-size: 16px;
     }
     &__img {
         width: 35%;
