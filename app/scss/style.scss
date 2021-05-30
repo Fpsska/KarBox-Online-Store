@@ -519,13 +519,17 @@
 //*************./TESTIMONIALS*************//
 
 .footer__column {
+    display: flex;
+    flex-grow: 1;
+    justify-content: space-between;
     .menu__item {
         @extend %rb-thin;
     }
     .menu__link {
+        // line-height: 2em;
+
         letter-spacing: 1px;
         font-size: 18px;
-        line-height: 44px;
         color: $first;
         opacity: 0.5;
         &:hover {

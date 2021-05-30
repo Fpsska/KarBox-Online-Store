@@ -71,7 +71,7 @@
         font-size: 18px;
     }
     .card__box {
-        padding: 0 .25em;
+        padding: 0 0.25em;
     }
     // /.THIRD PAGE
     .location__title {
@@ -326,7 +326,7 @@
         }
     }
     .social__img_icon {
-        padding: .75em !important;
+        padding: 0.75em !important;
         width: 3em !important;
         height: 3em !important;
     }
@@ -710,7 +710,7 @@
         margin-bottom: 1em;
     }
     .social__img_icon {
-        padding: .55em !important;
+        padding: 0.55em !important;
         width: 2.5em !important;
         height: 2.5em !important;
     }
@@ -861,7 +861,7 @@
         }
     }
     .social__img_icon {
-        padding: .45em !important;
+        padding: 0.45em !important;
         width: 2em !important;
         height: 2em !important;
     }
@@ -970,9 +970,6 @@
             width: 6px !important;
             height: 12px !important;
         }
-    }
-    .menu__item_title {
-        margin-bottom: 20px !important;
     }
     .badges__circle_left {
         left: 35%;
@@ -1401,7 +1398,7 @@
         left: 81.5% !important;
     }
     .response-block__phone {
-        padding: 1.41em .9em;
+        padding: 1.41em 0.9em;
     }
     // /.MAIN PAGE
     .about_first {
@@ -1490,13 +1487,13 @@
                 left: 2%;
             }
         }
-    }   
+    }
     .testmnls-slider__text {
         font-size: 12px;
         max-width: 100%;
         margin: 0;
         padding: 1em;
-    } 
+    }
     .testmnls-slider__item {
         display: flex;
         flex-direction: column;
@@ -1644,7 +1641,7 @@
     }
     .response-block__phone {
         font-size: 12px !important;
-        padding: 1.35Em 1em !important;
+        padding: 1.35em 1em !important;
     }
     #vendor__slider {
         display: none !important;
@@ -1653,7 +1650,7 @@
         display: block !important;
     }
     .social__img_icon {
-        padding: .3em !important;
+        padding: 0.3em !important;
         width: 1.8em !important;
         height: 1.8em !important;
     }
@@ -1792,7 +1789,7 @@
     .btn--white {
         font-size: 6px;
         max-width: 14.5em !important;
-        padding-right: 0em .5em 0 .75em;
+        padding-right: 0em 0.5em 0 0.75em;
         max-height: 5em;
         &::after {
             left: 87% !important;
@@ -1953,6 +1950,9 @@
     }
     .footer-input__text {
         max-width: 100% !important;
+    }
+    .menu__item_title {
+        margin-bottom: 10px !important;
     }
     // /.MAIN PAGE
     .bar-mobile {
